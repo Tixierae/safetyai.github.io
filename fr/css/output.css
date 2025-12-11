@@ -1688,3 +1688,9 @@ video {
     background-size: cover;
   }
 }
+
+/* your other styles... */
+
+body {
+  font-family: "Inter", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
