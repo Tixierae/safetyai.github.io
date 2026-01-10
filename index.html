@@ -1,1007 +1,902 @@
-<!doctype html>
-<html lang="en" class="white scroll-smooth" id="root">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:image" content="/img/logo.png"/>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="./css/output.css">
-
-     <script data-goatcounter="https://safetyai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafetyAI</title>
+    
+    <script data-goatcounter="https://safetyai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
+    <meta property="og:image" content="assets/img/logo.png"/>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white dark:bg-dark selection font-Inter">
 
-<div class="fixed top-0 left-0 z-50 w-full">
-    <div class="px-4 py-4 lg:px-16 lg:py-1" id="header">
-        <div class="flex items-center justify-between">
+<body>
+
+    <header>
+        <div class="container nav-container">
             <a href="#home" class="logo">
-                <img src="./img/logo-light.png" alt="logo" class="hidden dark:block w-44">
-                <img src="./img/logo.png" alt="logo" class="block dark:hidden w-44">
+                <img src="assets/img/logo.png" alt="SafetyAI" class="logo-light">
+                
+                <img src="assets/img/logo-light.png" alt="SafetyAI" class="logo-dark">
             </a>
-            <div class="navigation hidden lg:block">
-                <nav>
-                    <ul class="flex items-center justify-between">
-                        <li class="px-6 py-4"><a href="#home" class="menu-item">Home</a></li>
-                        <li class="px-6 py-4"><a href="#chatsafetyai" class="menu-item">ChatSafetyAI</a></li>
-                        <li class="px-6 py-4"><a href="#dashboard" class="menu-item">Dashboard</a></li>
-                        <li class="px-6 py-4"><a href="#assistant" class="menu-item">Assistant</a></li>
-                        <li class="px-6 py-4"><a href="#team" class="menu-item">Team</a></li>
-                        <li class="px-6 py-4"><a href="#council" class="menu-item">Council</a></li>
-                        <li class="px-6 py-4"><a href="#pricing" class="menu-item">Pricing</a></li>
 
-                        <li class="px-6 py-4 flex items-center gap-2">
-                          <a href="/" class="px-2 py-1 underline underline-offset-4 font-semibold cursor-default text-gray-900 dark:text-white">
-                            EN
-                          </a>
-                          <span class="text-gray-400 dark:text-gray-500">|</span>
-                          <a href="/fr/" class="px-2 py-1 transition hover:underline underline-offset-4 text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100">
-                            FR
-                          </a>
-                        </li>
+<nav>
+                <ul class="nav-links" id="navLinks">
+                    <li>
+                        <a href="#home">
+                            <span class="en-text">Home</span>
+                            <span class="fr-text">Accueil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="updates/index.html">
+                            <span class="en-text">Updates</span>
+                            <span class="fr-text">Actualités</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#chat">ChatSafetyAI</a>
+                    </li>
+                    <li>
+                        <a href="#dashboard">
+                            <span class="en-text">Dashboard</span>
+                            <span class="fr-text">Tableau de bord</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#assistant">Assistant</a>
+                    </li>
+                    <li>
+                        <a href="#team">
+                            <span class="en-text">Team</span>
+                            <span class="fr-text">Équipe</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#council">
+                            <span class="en-text">Council</span>
+                            <span class="fr-text">Conseil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pricing">
+                            <span class="en-text">Pricing</span>
+                            <span class="fr-text">Tarifs</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-                    </ul>
-                </nav>
-            </div>
-            <div class="panel flex items-center">
-
-                <button type="button" class="cursor-pointer" id="change-mood">
-                    <svg viewBox="0 0 23 23" class="cursor-pointer block dark:hidden" fill=""
-                         xmlns="http://www.w3.org/2000/svg" width="30px">
-                        <path d="M9.55078 1.5C5.80078 1.5 1.30078 5.25 1.30078 11.25C1.30078 17.25 5.80078 21.75 11.8008 21.75C17.8008 21.75 21.5508 17.25 21.5508 13.5C13.3008 18.75 4.30078 9.75 9.55078 1.5Z"
-                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    <svg viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="30px"
-                         class="cursor-pointer dark:block hidden">
-                        <mask id="path-1-inside-1_977:1934" fill="white">
-                            <path d="M12.0508 16.5C10.8573 16.5 9.71271 16.0259 8.8688 15.182C8.02489 14.3381 7.55078 13.1935 7.55078 12C7.55078 10.8065 8.02489 9.66193 8.8688 8.81802C9.71271 7.97411 10.8573 7.5 12.0508 7.5C13.2443 7.5 14.3888 7.97411 15.2328 8.81802C16.0767 9.66193 16.5508 10.8065 16.5508 12C16.5508 13.1935 16.0767 14.3381 15.2328 15.182C14.3888 16.0259 13.2443 16.5 12.0508 16.5ZM12.0508 18C13.6421 18 15.1682 17.3679 16.2934 16.2426C17.4186 15.1174 18.0508 13.5913 18.0508 12C18.0508 10.4087 17.4186 8.88258 16.2934 7.75736C15.1682 6.63214 13.6421 6 12.0508 6C10.4595 6 8.93336 6.63214 7.80814 7.75736C6.68292 8.88258 6.05078 10.4087 6.05078 12C6.05078 13.5913 6.68292 15.1174 7.80814 16.2426C8.93336 17.3679 10.4595 18 12.0508 18ZM12.0508 0C12.2497 0 12.4405 0.0790176 12.5811 0.21967C12.7218 0.360322 12.8008 0.551088 12.8008 0.75V3.75C12.8008 3.94891 12.7218 4.13968 12.5811 4.28033C12.4405 4.42098 12.2497 4.5 12.0508 4.5C11.8519 4.5 11.6611 4.42098 11.5205 4.28033C11.3798 4.13968 11.3008 3.94891 11.3008 3.75V0.75C11.3008 0.551088 11.3798 0.360322 11.5205 0.21967C11.6611 0.0790176 11.8519 0 12.0508 0V0ZM12.0508 19.5C12.2497 19.5 12.4405 19.579 12.5811 19.7197C12.7218 19.8603 12.8008 20.0511 12.8008 20.25V23.25C12.8008 23.4489 12.7218 23.6397 12.5811 23.7803C12.4405 23.921 12.2497 24 12.0508 24C11.8519 24 11.6611 23.921 11.5205 23.7803C11.3798 23.6397 11.3008 23.4489 11.3008 23.25V20.25C11.3008 20.0511 11.3798 19.8603 11.5205 19.7197C11.6611 19.579 11.8519 19.5 12.0508 19.5ZM24.0508 12C24.0508 12.1989 23.9718 12.3897 23.8311 12.5303C23.6905 12.671 23.4997 12.75 23.3008 12.75H20.3008C20.1019 12.75 19.9111 12.671 19.7705 12.5303C19.6298 12.3897 19.5508 12.1989 19.5508 12C19.5508 11.8011 19.6298 11.6103 19.7705 11.4697C19.9111 11.329 20.1019 11.25 20.3008 11.25H23.3008C23.4997 11.25 23.6905 11.329 23.8311 11.4697C23.9718 11.6103 24.0508 11.8011 24.0508 12ZM4.55078 12C4.55078 12.1989 4.47176 12.3897 4.33111 12.5303C4.19046 12.671 3.99969 12.75 3.80078 12.75H0.800781C0.601869 12.75 0.411103 12.671 0.270451 12.5303C0.129799 12.3897 0.0507813 12.1989 0.0507812 12C0.0507813 11.8011 0.129799 11.6103 0.270451 11.4697C0.411103 11.329 0.601869 11.25 0.800781 11.25H3.80078C3.99969 11.25 4.19046 11.329 4.33111 11.4697C4.47176 11.6103 4.55078 11.8011 4.55078 12ZM20.5363 3.5145C20.6769 3.65515 20.7559 3.84588 20.7559 4.04475C20.7559 4.24362 20.6769 4.43435 20.5363 4.575L18.4153 6.6975C18.3455 6.76713 18.2628 6.82235 18.1717 6.86C18.0806 6.89765 17.983 6.91699 17.8845 6.91692C17.6855 6.91678 17.4947 6.83758 17.354 6.69675C17.2844 6.62702 17.2292 6.54425 17.1915 6.45318C17.1539 6.36211 17.1345 6.26452 17.1346 6.16597C17.1348 5.96695 17.214 5.77613 17.3548 5.6355L19.4758 3.5145C19.6164 3.3739 19.8072 3.29491 20.006 3.29491C20.2049 3.29491 20.3956 3.3739 20.5363 3.5145ZM6.74678 17.304C6.88738 17.4446 6.96637 17.6354 6.96637 17.8342C6.96637 18.0331 6.88738 18.2239 6.74678 18.3645L4.62578 20.4855C4.48433 20.6221 4.29488 20.6977 4.09823 20.696C3.90158 20.6943 3.71347 20.6154 3.57442 20.4764C3.43536 20.3373 3.35648 20.1492 3.35478 19.9526C3.35307 19.7559 3.42866 19.5665 3.56528 19.425L5.68628 17.304C5.82693 17.1634 6.01766 17.0844 6.21653 17.0844C6.4154 17.0844 6.60614 17.1634 6.74678 17.304ZM20.5363 20.4855C20.3956 20.6261 20.2049 20.7051 20.006 20.7051C19.8072 20.7051 19.6164 20.6261 19.4758 20.4855L17.3548 18.3645C17.2182 18.223 17.1426 18.0336 17.1443 17.8369C17.146 17.6403 17.2249 17.4522 17.3639 17.3131C17.503 17.1741 17.6911 17.0952 17.8877 17.0935C18.0844 17.0918 18.2738 17.1674 18.4153 17.304L20.5363 19.425C20.6769 19.5656 20.7559 19.7564 20.7559 19.9552C20.7559 20.1541 20.6769 20.3449 20.5363 20.4855ZM6.74678 6.6975C6.60614 6.8381 6.4154 6.91709 6.21653 6.91709C6.01766 6.91709 5.82693 6.8381 5.68628 6.6975L3.56528 4.575C3.49365 4.50582 3.43651 4.42306 3.39721 4.33155C3.3579 4.24005 3.33721 4.14164 3.33634 4.04205C3.33548 3.94247 3.35445 3.84371 3.39216 3.75153C3.42988 3.65936 3.48557 3.57562 3.55598 3.5052C3.6264 3.43478 3.71014 3.37909 3.80232 3.34138C3.89449 3.30367 3.99325 3.2847 4.09283 3.28556C4.19242 3.28643 4.29083 3.30712 4.38233 3.34642C4.47384 3.38573 4.5566 3.44287 4.62578 3.5145L6.74678 5.6355C6.81663 5.70517 6.87204 5.78793 6.90985 5.87905C6.94766 5.97017 6.96712 6.06785 6.96712 6.1665C6.96712 6.26515 6.94766 6.36283 6.90985 6.45395C6.87204 6.54507 6.81663 6.62783 6.74678 6.6975Z"></path>
-                        </mask>
-                        <path d="M12.0508 16.5C10.8573 16.5 9.71271 16.0259 8.8688 15.182C8.02489 14.3381 7.55078 13.1935 7.55078 12C7.55078 10.8065 8.02489 9.66193 8.8688 8.81802C9.71271 7.97411 10.8573 7.5 12.0508 7.5C13.2443 7.5 14.3888 7.97411 15.2328 8.81802C16.0767 9.66193 16.5508 10.8065 16.5508 12C16.5508 13.1935 16.0767 14.3381 15.2328 15.182C14.3888 16.0259 13.2443 16.5 12.0508 16.5ZM12.0508 18C13.6421 18 15.1682 17.3679 16.2934 16.2426C17.4186 15.1174 18.0508 13.5913 18.0508 12C18.0508 10.4087 17.4186 8.88258 16.2934 7.75736C15.1682 6.63214 13.6421 6 12.0508 6C10.4595 6 8.93336 6.63214 7.80814 7.75736C6.68292 8.88258 6.05078 10.4087 6.05078 12C6.05078 13.5913 6.68292 15.1174 7.80814 16.2426C8.93336 17.3679 10.4595 18 12.0508 18ZM12.0508 0C12.2497 0 12.4405 0.0790176 12.5811 0.21967C12.7218 0.360322 12.8008 0.551088 12.8008 0.75V3.75C12.8008 3.94891 12.7218 4.13968 12.5811 4.28033C12.4405 4.42098 12.2497 4.5 12.0508 4.5C11.8519 4.5 11.6611 4.42098 11.5205 4.28033C11.3798 4.13968 11.3008 3.94891 11.3008 3.75V0.75C11.3008 0.551088 11.3798 0.360322 11.5205 0.21967C11.6611 0.0790176 11.8519 0 12.0508 0V0ZM12.0508 19.5C12.2497 19.5 12.4405 19.579 12.5811 19.7197C12.7218 19.8603 12.8008 20.0511 12.8008 20.25V23.25C12.8008 23.4489 12.7218 23.6397 12.5811 23.7803C12.4405 23.921 12.2497 24 12.0508 24C11.8519 24 11.6611 23.921 11.5205 23.7803C11.3798 23.6397 11.3008 23.4489 11.3008 23.25V20.25C11.3008 20.0511 11.3798 19.8603 11.5205 19.7197C11.6611 19.579 11.8519 19.5 12.0508 19.5ZM24.0508 12C24.0508 12.1989 23.9718 12.3897 23.8311 12.5303C23.6905 12.671 23.4997 12.75 23.3008 12.75H20.3008C20.1019 12.75 19.9111 12.671 19.7705 12.5303C19.6298 12.3897 19.5508 12.1989 19.5508 12C19.5508 11.8011 19.6298 11.6103 19.7705 11.4697C19.9111 11.329 20.1019 11.25 20.3008 11.25H23.3008C23.4997 11.25 23.6905 11.329 23.8311 11.4697C23.9718 11.6103 24.0508 11.8011 24.0508 12ZM4.55078 12C4.55078 12.1989 4.47176 12.3897 4.33111 12.5303C4.19046 12.671 3.99969 12.75 3.80078 12.75H0.800781C0.601869 12.75 0.411103 12.671 0.270451 12.5303C0.129799 12.3897 0.0507813 12.1989 0.0507812 12C0.0507813 11.8011 0.129799 11.6103 0.270451 11.4697C0.411103 11.329 0.601869 11.25 0.800781 11.25H3.80078C3.99969 11.25 4.19046 11.329 4.33111 11.4697C4.47176 11.6103 4.55078 11.8011 4.55078 12ZM20.5363 3.5145C20.6769 3.65515 20.7559 3.84588 20.7559 4.04475C20.7559 4.24362 20.6769 4.43435 20.5363 4.575L18.4153 6.6975C18.3455 6.76713 18.2628 6.82235 18.1717 6.86C18.0806 6.89765 17.983 6.91699 17.8845 6.91692C17.6855 6.91678 17.4947 6.83758 17.354 6.69675C17.2844 6.62702 17.2292 6.54425 17.1915 6.45318C17.1539 6.36211 17.1345 6.26452 17.1346 6.16597C17.1348 5.96695 17.214 5.77613 17.3548 5.6355L19.4758 3.5145C19.6164 3.3739 19.8072 3.29491 20.006 3.29491C20.2049 3.29491 20.3956 3.3739 20.5363 3.5145ZM6.74678 17.304C6.88738 17.4446 6.96637 17.6354 6.96637 17.8342C6.96637 18.0331 6.88738 18.2239 6.74678 18.3645L4.62578 20.4855C4.48433 20.6221 4.29488 20.6977 4.09823 20.696C3.90158 20.6943 3.71347 20.6154 3.57442 20.4764C3.43536 20.3373 3.35648 20.1492 3.35478 19.9526C3.35307 19.7559 3.42866 19.5665 3.56528 19.425L5.68628 17.304C5.82693 17.1634 6.01766 17.0844 6.21653 17.0844C6.4154 17.0844 6.60614 17.1634 6.74678 17.304ZM20.5363 20.4855C20.3956 20.6261 20.2049 20.7051 20.006 20.7051C19.8072 20.7051 19.6164 20.6261 19.4758 20.4855L17.3548 18.3645C17.2182 18.223 17.1426 18.0336 17.1443 17.8369C17.146 17.6403 17.2249 17.4522 17.3639 17.3131C17.503 17.1741 17.6911 17.0952 17.8877 17.0935C18.0844 17.0918 18.2738 17.1674 18.4153 17.304L20.5363 19.425C20.6769 19.5656 20.7559 19.7564 20.7559 19.9552C20.7559 20.1541 20.6769 20.3449 20.5363 20.4855ZM6.74678 6.6975C6.60614 6.8381 6.4154 6.91709 6.21653 6.91709C6.01766 6.91709 5.82693 6.8381 5.68628 6.6975L3.56528 4.575C3.49365 4.50582 3.43651 4.42306 3.39721 4.33155C3.3579 4.24005 3.33721 4.14164 3.33634 4.04205C3.33548 3.94247 3.35445 3.84371 3.39216 3.75153C3.42988 3.65936 3.48557 3.57562 3.55598 3.5052C3.6264 3.43478 3.71014 3.37909 3.80232 3.34138C3.89449 3.30367 3.99325 3.2847 4.09283 3.28556C4.19242 3.28643 4.29083 3.30712 4.38233 3.34642C4.47384 3.38573 4.5566 3.44287 4.62578 3.5145L6.74678 5.6355C6.81663 5.70517 6.87204 5.78793 6.90985 5.87905C6.94766 5.97017 6.96712 6.06785 6.96712 6.1665C6.96712 6.26515 6.94766 6.36283 6.90985 6.45395C6.87204 6.54507 6.81663 6.62783 6.74678 6.6975Z"
-                              fill="black" stroke="white" stroke-width="2" mask="url(#path-1-inside-1_977:1934)"></path>
-                    </svg>
-                </button>
+            <div class="nav-utils">
+                <div class="lang-switch" id="langToggle">EN | FR</div>
+                
+                <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <svg id="sun-icon" style="display:none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg id="moon-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </div>
+                
+                <div class="menu-btn" id="menuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="main">
-    <div class="relative flex items-center h-screen px-6 lg:px-0 bg-white dark:bg-dark" id="home">
-        <div class="sticky z-10 w-full lg:w-2/5 2xl:w-1/2 mx-auto text-center mt-20">
-            <h1 class="heading text-3xl lg:text-5xl !leading-normal">SafetyAI: State of the Art AI for Occupational Safety</h1>
-
-            <p class="text-neutral-600 dark:text-gray-400 text-lg lg:text-xl font-medium leading-normal my-4">
-                Since 2017, we conduct cutting-edge research and development to bring the latest AI innovations to occupational safety and health on the jobsite.
-                We are 100% supported by the <a href="#council"><u>SafetyAI Council</u></a>, a consortium of leading companies that fund our work, share their datasets for collaborative machine learning, and test our models and applications in the field. Made with ❤️ from 🇺🇸 and 🇫🇷.
-            </p> <br>
+    </header>
 
 
-            <div class="flex flex-col lg:flex-row items-center justify-center mt-8 p-6">
-                <a href="https://safetyapp.shinyapps.io/chatsafetyai_demo_access_request/" target="_blank" class="btn bg-[#4a6cf7]">Try ChatSafetyAI</a>
-                <a href="https://scholar.google.com/citations?hl=en&user=l5JRP-kAAAAJ&view_op=list_works" target="_blank"
-                   class="btn bg-[#090E34] text-neutral-900 bg-opacity-20 hover:bg-opacity-30 dark:bg-[#ffff64] dark:bg-opacity-10 dark:hover:bg-opacity-5">Read our Papers</a>
+    <section id="home">
+        <div class="container" style="text-align: center; max-width: 900px;">
+            <div class="subtitle en-text">The Future of OHSE</div>
+            <div class="subtitle fr-text">L'avenir de la SST</div>
+            
+            <h1 class="en-text">State of the Art AI<br><span class="text-gradient">for Occupational Safety</span></h1>
+            <h1 class="fr-text">L'IA de Pointe<br><span class="text-gradient">pour la Sécurité au Travail</span></h1>
+            
+            <div class="en-text" style="margin: 30px auto; font-size: 1.15rem; color: var(--text-muted);">
+                <p>Since 2017, at SafetyAI, we conduct cutting-edge research and development to bring the latest AI innovations to occupational safety and health on the jobsite.</p>
+                <p style="margin-top: 15px;">
+                    We are 100% supported by the <a href="#council" style="color:var(--primary-color); font-weight:600; text-decoration: underline;">SafetyAI Council</a>, a consortium of leading companies that fund our work, share their datasets for collaborative machine learning, and test our models in the field.
+                </p>
+                <p style="margin-top: 15px; font-size: 0.95rem;">Made with ❤️ from 🇫🇷 and 🇺🇸</p>
+            </div>
 
-                <a href="mailto:info@safetyai.io" class="btn bg-[#4a6cf7]">Contact Us</a>
-
+            <div class="fr-text" style="margin: 30px auto; font-size: 1.15rem; color: var(--text-muted);">
+                <p>Depuis 2017, chez SafetyAI, nous menons une R&D de pointe pour apporter les dernières innovations en IA à la santé et sécurité sur les chantiers.</p>
+                <p style="margin-top: 15px;">
+                    Nous sommes soutenus à 100% par le <a href="#council" style="color:var(--primary-color); font-weight:600; text-decoration: underline;">SafetyAI Council</a>, un consortium d'entreprises leaders qui financent nos travaux, partagent leurs données pour l'apprentissage collaboratif et testent nos modèles sur le terrain.
+                </p>
+                <p style="margin-top: 15px; font-size: 0.95rem;">Fait avec ❤️ depuis la 🇫🇷 et les 🇺🇸</p>
             </div>
             
-        </div>
-        <div class="absolute top-0 right-0">
-            <svg width="450" height="556" viewBox="0 0 450 556" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)"></circle>
-                <circle cx="17.9997" cy="182" r="18" fill="url(#paint1_radial_25:217)"></circle>
-                <circle cx="76.9997" cy="288" r="34" fill="url(#paint2_radial_25:217)"></circle>
-                <circle cx="325.486" cy="302.87" r="180" transform="rotate(-37.6852 325.486 302.87)"
-                        fill="url(#paint3_linear_25:217)"></circle>
-                <circle opacity="0.8" cx="184.521" cy="315.521" r="132.862" transform="rotate(114.874 184.521 315.521)"
-                        stroke="url(#paint4_linear_25:217)"></circle>
-                <circle opacity="0.8" cx="356" cy="290" r="179.5" transform="rotate(-30 356 290)"
-                        stroke="url(#paint5_linear_25:217)"></circle>
-                <circle opacity="0.8" cx="191.659" cy="302.659" r="133.362" transform="rotate(133.319 191.659 302.659)"
-                        fill="url(#paint6_linear_25:217)"></circle>
-                <defs>
-                    <linearGradient id="paint0_linear_25:217" x1="-54.5003" y1="-178" x2="222" y2="288"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7"></stop>
-                        <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                    </linearGradient>
-                    <radialGradient id="paint1_radial_25:217" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                                    gradientTransform="translate(17.9997 182) rotate(90) scale(18)">
-                        <stop offset="0.145833" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                        <stop offset="1" stop-color="#4A6CF7" stop-opacity="0.08"></stop>
-                    </radialGradient>
-                    <radialGradient id="paint2_radial_25:217" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                                    gradientTransform="translate(76.9997 288) rotate(90) scale(34)">
-                        <stop offset="0.145833" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                        <stop offset="1" stop-color="#4A6CF7" stop-opacity="0.08"></stop>
-                    </radialGradient>
-                    <linearGradient id="paint3_linear_25:217" x1="226.775" y1="-66.1548" x2="292.157" y2="351.421"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7"></stop>
-                        <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                    </linearGradient>
-                    <linearGradient id="paint4_linear_25:217" x1="184.521" y1="182.159" x2="184.521" y2="448.882"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7"></stop>
-                        <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-                    </linearGradient>
-                    <linearGradient id="paint5_linear_25:217" x1="356" y1="110" x2="356" y2="470"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7"></stop>
-                        <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-                    </linearGradient>
-                    <linearGradient id="paint6_linear_25:217" x1="118.524" y1="29.2497" x2="166.965" y2="338.63"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7"></stop>
-                        <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </div>
-        <div class="absolute bottom-0 left-0">
-            <svg width="364" height="201" viewBox="0 0 364 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
-                      stroke="url(#paint0_linear_25:218)"></path>
-                <path d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
-                      stroke="url(#paint1_linear_25:218)"></path>
-                <path d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
-                      stroke="url(#paint2_linear_25:218)"></path>
-                <path d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
-                      stroke="url(#paint3_linear_25:218)"></path>
-                <circle opacity="0.8" cx="214.505" cy="60.5054" r="49.7205" transform="rotate(-13.421 214.505 60.5054)"
-                        stroke="url(#paint4_linear_25:218)"></circle>
-                <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)"></circle>
-                <defs>
-                    <linearGradient id="paint0_linear_25:218" x1="184.389" y1="69.2405" x2="184.389" y2="212.24"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
-                        <stop offset="1" stop-color="#4A6CF7"></stop>
-                    </linearGradient>
-                    <linearGradient id="paint1_linear_25:218" x1="156.389" y1="69.2405" x2="156.389" y2="212.24"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
-                        <stop offset="1" stop-color="#4A6CF7"></stop>
-                    </linearGradient>
-                    <linearGradient id="paint2_linear_25:218" x1="125.389" y1="69.2405" x2="125.389" y2="212.24"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
-                        <stop offset="1" stop-color="#4A6CF7"></stop>
-                    </linearGradient>
-                    <linearGradient id="paint3_linear_25:218" x1="93.8507" y1="67.2674" x2="89.9278" y2="210.214"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7" stop-opacity="0"></stop>
-                        <stop offset="1" stop-color="#4A6CF7"></stop>
-                    </linearGradient>
-                    <linearGradient id="paint4_linear_25:218" x1="214.505" y1="10.2849" x2="212.684" y2="99.5816"
-                                    gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4A6CF7"></stop>
-                        <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                    </linearGradient>
-                    <radialGradient id="paint5_radial_25:218" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                                    gradientTransform="translate(220 63) rotate(90) scale(43)">
-                        <stop offset="0.145833" stop-color="white" stop-opacity="0"></stop>
-                        <stop offset="1" stop-color="white" stop-opacity="0.08"></stop>
-                    </radialGradient>
-                </defs>
-            </svg>
-        </div>
-    </div>
-
-
-    <div class="py-20 md:py-24 bg-[#efefef] dark:bg-[#0b113a]" id="chatsafetyai">
-        <div class="container px-4 mx-auto">
-            <div class="w-full lg:w-1/2 2xl:w-1/2 mx-auto text-center">
-
-                <h2 class="heading text-2xl lg:text-4xl !leading-normal">ChatSafetyAI</h2>
-
-                    <p class="text-neutral-600 dark:text-gray-400 text-lg lg:text-xl font-medium leading-normal my-4">
-                        ChatSafetyAI is the ChatGPT for all OHSE tasks on the field. Powered by the SafetyAI Community's <a href="#council"><u>Super Predictive Models</u></a>, ChatSafetyAI accepts text queries and documents in English, Spanish, French, Hindi, Portuguese and Arabic, as well as photos. Custom databases can also be created to let ChatSafetyAI respond based on your own documentation.
-                        <br>ChatSafetyAI is under active development since February 2023!
-                        <br>See recent updates:
-                        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 01-18-24.pdf" target="_blank"><u>Q1'24</u></a>,
-                        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 04-09-24.pdf" target="_blank"><u>Q2'24</u></a>,
-                        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 08-22-24.pdf" target="_blank"><u>Q3'24</u></a>,
-                        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 12-18-24.pdf" target="_blank"><u>Q4'24</u></a>,
-                        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 04-08-25.pdf" target="_blank"><u>Q1'25</u></a>.
-
-                        <br>👉 <strong>Request access to the demo <a href="https://safetyapp.shinyapps.io/chatsafetyai_demo_access_request/" target="_blank"><u>here</u></a></strong>.
-                    </p>
-
-                    <div class="flex flex-col lg:flex-row items-center justify-center mt-8 p-6">
-                        <a href="https://safetyapp.shinyapps.io/chatsafetyai_demo/" target="_blank" class="btn bg-[#4a6cf7]">Demo App</a>
-                        <a href="https://safetyapp.shinyapps.io/chatsafetyai/" target="_blank"
-                   class="btn bg-[#090E34] text-neutral-900 bg-opacity-20 hover:bg-opacity-30 dark:bg-[#ffff64] dark:bg-opacity-10 dark:hover:bg-opacity-5">Prod App &#8203;</a>
-                   <a href="https://safetyapp.shinyapps.io/chatsafetyai_dashboard_new/" target="_blank" class="btn bg-[#4a6cf7]">Usage Analytics</a>
-                    </div>
-
-                    <p class="text-neutral-600 dark:text-gray-400 text-lg lg:text-xl font-medium leading-normal my-4">
-                    <br><strong>Some of ChatSafetyAI's functionalities:</strong>
-                    </p>
-
-
-                <div class="flex flex-col lg:flex-row items-center justify-center flex-wrap">
-                  
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Photo HECA</h3>
-                        <iframe width="361" height="203" src="https://www.youtube.com/embed/PK4SD2G3iQI?si=G7dkSZvwjCm-7LjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                 <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Prejob Brief</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/cJKmNwSlxqM?si=hjxNrYZHZ2vDy5U7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Photo Annotation</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/uMGpk7ZOy_8?si=4ZUWe7qIWAqIo4hz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Custom Databases</h3>
-                        <iframe width="361" height="203" src="https://www.youtube.com/embed/hGjGtE-P1Sg?si=IV-K9RmY_bM6YpW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Injury Prediction</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/TvI7y7jlWAY?si=i6w_9MjSJvWtanOx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Presentation Generation</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/3fGSyktWg4s?si=FtWd9CegBWa5dC5e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Regulations Query</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/nC8LCA4fUNA?si=JZLZwVXFNLucjBh2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">ChatSafetyAI on Smartphones</h3>
-                      <iframe width="361" height="203" src="https://youtube.com/embed/lBmwRusbXXY?si=xXttcsrzI9bhNcZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div> 
-
-
-                </div>
-                </div>
-
-
-                <div class="mt-10">
-                    <div class="flex flex-col lg:flex-row items-center justify-center flex-wrap">
-
-                    <div class="features-box">
-                      <div class="py-4 px-1">
-                        <div class="icon-box mb-6 text-center">
-                          <i class="fas fa-microscope fa-4x mb-4 text-gray-600"></i>
-                          <h3 class="heading text-2xl mb-2 leading-normal">Vision and Scientific Expertise</h3>
-                          <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">
-                            ChatSafetyAI is developed by leading researchers in AI and jobsite safety, with collectively over 200 peer-reviewed papers and 14k citations since 2005. Well before the AI boom, <a href="https://scholar.google.com/citations?hl=en&user=l5JRP-kAAAAJ&view_op=list_works" target="_blank"><u>Dr. Antoine Tixier</u></a> and <a href="https://scholar.google.com/citations?user=qKn2a9EAAAAJ&hl=en" target="_blank"><u>Dr. Matt Hallowell</u></a> led the way in applying machine learning to construction accident data. 
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="features-box">
-                      <div class="py-4 px-1">
-                        <div class="icon-box mb-6 text-center">
-                          <i class="fas fa-people-group fa-4x mb-4 text-gray-600"></i>
-                          <h3 class="heading text-2xl mb-2 leading-normal">Made by the Industry</h3>
-                          <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">
-                            The <a href="#council"><u>SafetyAI Council</u></a>, a team of major companies, provide use cases to customize modes like Regulations, Photo HECA, and Pre-job Brief. They also share their accident datasets to train Super Predictive Models, boosting forecasts of risk and injury characteristics (Safer Together initiative).
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="features-box">
-                      <div class="py-4 px-1">
-                        <div class="icon-box mb-6 text-center">
-                          <i class="fas fa-briefcase fa-4x mb-4 text-gray-600"></i>
-                          <h3 class="heading text-2xl mb-2 leading-normal">Built for the Workplace</h3>
-                          <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">
-                            ChatSafetyAI features guardrails that block non-work-related queries, keeping usage focused and professional. It automatically blurs faces, redacts sensitive text, and never uses conversations for training. It can be deployed in-house for maximum privacy and security (on MS Azure or AWS).
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="features-box">
-                      <div class="py-4 px-1">
-                        <div class="icon-box mb-6 text-center">
-                          <i class="fas fa-puzzle-piece fa-4x mb-4 text-gray-600"></i>
-                          <h3 class="heading text-2xl mb-2 leading-normal">Flexible & Expandable</h3>
-                          <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">
-                            Modes can be customized per company and accessed as APIs. ChatSafetyAI can have knowledge of your documentation, generate documents and presentations using your templates, and integrate with your systems.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="features-box">
-                      <div class="py-4 px-1">
-                        <div class="icon-box mb-6 text-center">
-                          <i class="fas fa-brain fa-4x mb-4 text-gray-600"></i>
-                          <h3 class="heading text-2xl mb-2 leading-normal">Engineered Knowledge & Prompts</h3>
-                          <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">
-                            The SafetyAI R&D team curates cutting-edge safety knowledge and crafts precise prompts. This ensures ChatSafetyAI understands domain-specific jargon and provides reliable answers.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="features-box">
-                      <div class="py-4 px-1">
-                        <div class="icon-box mb-6 text-center">
-                          <i class="fas fa-layer-group fa-4x mb-4 text-gray-600"></i>
-                          <h3 class="heading text-2xl mb-2 leading-normal">Best of Each LLM</h3>
-                          <p class="text-base text-gray-500 dark:text-gray-400 opacity-90">
-                            ChatSafetyAI capitalizes on the respective strengths of multiple cutting-edge LLMs. This ensures optimized performance in image understanding, object detection, long context handling, and other specialized tasks.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="py-20 md:py-24 bg-white dark:bg-dark" id="dashboard">
-        <div class="container px-4 mx-auto">
-            <div class="w-full lg:w-1/2 2xl:w-1/2 mx-auto text-center">
-
-                <h2 class="heading text-2xl lg:text-4xl !leading-normal">SafetyAI Dashboard</h2>
-
-                <p class="text-neutral-600 dark:text-gray-400 text-lg lg:text-xl font-medium leading-normal my-4">
-                The SafetyAI Dashboard is an interactive web application for analyzing and visualizing a company's incident and observation dataset (narratives + safety outcomes) using natural language processing, network analysis, time series analysis, and other data mining methods. The Dashboard also provides an interface to the SafetyAI predictive models (company custom and community), and to a binary and semantic narrative search engine.
-                All the methods the Dashboard relies on were developed as part of multiyear research projects and have led to peer-reviewed publications in AI and construction journals and conferences. All methods have been developed and validated on large-scale, real-world incident datasets.
-                </p>
-
-                <div class="flex flex-col lg:flex-row items-center justify-center mt-8 p-6">
-                    <a href="https://safetyapp.shinyapps.io/safety_ai_dashboard/" target="_blank" class="btn bg-[#4a6cf7]">Go to Prod App</a>
-                </div>
-
-
-
-                <div class="flex flex-col lg:flex-row items-center justify-center flex-wrap">
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Stats & Time Series Forecasting</h3>
-                        <iframe width="361" height="203" src="https://www.youtube.com/embed/WoSZUFeIkWQ?si=qC7Jwify_bJThdQX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Word Networks</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/ZZfFsG-d2R0?si=L_K2KhVu2RGV4MpE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Attribute Networks</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/2Pxg2NrOPq4?si=gqvrYLLN1sA6mcvO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Risk Assessment</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/nmZYpCwmRHk?si=4nq1udiyn6Jwgdrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Predictive Models</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/XqeiedW2R_A?si=YxgxBBcunwsVgT5T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                  
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Binary & Semantic Search</h3>
-                      <iframe width="361" height="203" src="https://www.youtube.com/embed/brSKMilbcqc?si=4W3ZcV89JNTJnzgJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div>
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">Learning Injury Precursors</h3>
-                      <iframe width="361" height="203" src="https://youtube.com/embed/pQycF6ZsUcw?si=JybC9-FhjOej7J-N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div> 
-                  
-                </div>
-                </div>
-
-
-
-        </div>
-    </div>
-
-
-    <div class="py-20 md:py-24 bg-[#efefef] dark:bg-[#0b113a]" id="assistant">
-        <div class="container px-4 mx-auto">
-            <div class="w-full lg:w-1/2 2xl:w-1/2 mx-auto text-center">
-                <h2 class="heading text-2xl lg:text-4xl !leading-normal">SafetyAI Assistant</h2>
+            <div class="flex-row" style="gap: 15px; margin-top: 40px; justify-content: center;">
                 
-                    <p class="text-neutral-600 dark:text-gray-400 text-lg lg:text-xl font-medium leading-normal my-4">
-                    The SafetyAI assistant is a simplified version of the <a href="#dashboard"><u>SafetyAI Dashboard</u></a> that features the functionalities that are the most useful onsite, with a user interface optimized for smartphones, and voice recognition capabilities.
+                <a href="https://safetyapp.shinyapps.io/chatsafetyai_demo_access_request/" target="_blank" class="btn-primary en-text">Try ChatSafetyAI</a>
+                <a href="https://safetyapp.shinyapps.io/chatsafetyai_demo_access_request/" target="_blank" class="btn-primary fr-text">Essayer ChatSafetyAI</a>
 
-                    By answering a few simple questions about work conditions and the task at hand for a particular work period, the SafetyAI Assistant provides on-site personnel with: (i) a risk assessment, (ii) predictions of the most likely accident characteristics, should an incident occur, and (iii) historical injury cases that have occurred in similar work in the past. This information is very useful during, e.g., pre-job safety meetings.
-                    </p>
+                <a href="https://scholar.google.com/citations?hl=en&user=l5JRP-kAAAAJ&view_op=list_works" target="_blank" class="btn-primary en-text" 
+                   style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); box-shadow: none;">
+                   Read our Papers
+                </a>
+                <a href="https://scholar.google.com/citations?hl=en&user=l5JRP-kAAAAJ&view_op=list_works" target="_blank" class="btn-primary fr-text" 
+                   style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); box-shadow: none;">
+                   Nos Papiers
+                </a>
 
-                    <div class="flex flex-col lg:flex-row items-center justify-center mt-8 p-6">
-                        <a href="https://safetyapp.shinyapps.io/safety_ai_assistant_public/" target="_blank" class="btn bg-[#4a6cf7]">Go to Demo App</a>
-                        <a href="https://safetyapp.shinyapps.io/safety_ai_assistant/" target="_blank"
-                   class="btn bg-[#090E34] text-neutral-900 bg-opacity-20 hover:bg-opacity-30 dark:bg-[#ffff64] dark:bg-opacity-10 dark:hover:bg-opacity-5">Go to Prod App &#8203;</a>
-                    </div>
-                  
-                <div class="flex flex-col lg:flex-row items-center justify-center flex-wrap">
-
-                  <div class="py-4 px-1">
-                    <div class="icon-box mb-6 text-center">
-                      <h3 class="heading text-2xl mb-2 leading-normal">SafetyAI Assistant Demo</h3>
-                      <iframe width="361" height="203" src="https://youtube.com/embed/U9SZIwLrrNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                  </div> 
-
-                </div>
-
+                <a href="mailto:info@safetyai.io" class="btn-primary en-text">Contact Us</a>
+                <a href="mailto:info@safetyai.io" class="btn-primary fr-text">Contact</a>
             </div>
         </div>
-    </div>
+    </section>
 
 
-
-
-    <div class="py-20 md:py-24 bg-white dark:bg-dark" id="team">
-
-        <div class="container px-4 mx-auto">
-            <div class="w-full lg:w-1/2 2xl:w-1/2 mx-auto text-center">
-                <h2 class="heading text-2xl lg:text-4xl !leading-normal">Team</h2>
-            </div>
-        </div>
-
-        <div class="container flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-4 md:px-8 mx-auto ">
-            <div class="relative px-4 lg:px-16 basis-1/2 ">
-                <img src="./img/antoine.jpg" alt="img" style="border-radius: 50%100px" class="sticky z-10">
-            </div>
-            <div class="relative mt-0 md:mt-12 lg:mt-0 basis-1/2 ">
-                <div class="mx-auto my-4 pr-8">
-                    <h2 class="heading !leading-normal text-2xl lg:text-3xl">
-                        Dr. Antoine Tixier <br> Co-Founder, CEO
-
-<!--                         <a href="https://www.linkedin.com/in/antoine-jp-tixier" class="social" target="blank">
-                        <svg width="19" height="17" viewBox="0 0 17 16">
-                        <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z"></path>
-                        </svg>
-                        </a> -->
-
-                        <a href="https://scholar.google.com/citations?user=l5JRP-kAAAAJ&hl=en" class="social" target="_blank">
-                        <img src="./img/scholar.png" width="16" height="13">
-                        </a>
-
-
-                    </h2>
-                    <p class="text-gray-500 dark:text-gray-400 opacity-90 text-base">
-                        Antoine's PhD (2013-15) focused on how to predict the characteristics of construction accidents with machine learning.
-                        Between 2015 and 2020, while a postdoc researcher in deep learning and natural language processing, Antoine started to work on SafetyAI in his free time. He built on his PhD research to develop new incident data analysis and visualization techniques and better prediction methods, and created the <a href="#dashboard"><u>SafetyAI Dashboard app</u></a>.
-                        <br> In 2020, Antoine started working full-time on SafetyAI and created the <a href="#assistant"><u>SafetyAI Assistant app</u></a> and the Safer Together approach (community predictive models). At the beginning of 2023, Antoine created <a href="#chatsafetyai"><u>ChatSafetyAI</u></a>, the ChatGPT for OHSE.
-                        Antoine is in charge of every aspect of SafetyAI, from conducting research, training models and writing papers, to developing web apps, creating online content (tutorial videos, website), and interfacing with clients (demos, support, reporting, in-house deployment, admin and legal aspects)...
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-4 md:px-8 mx-auto ">
-            <div class="relative px-4 lg:px-16 basis-1/2 ">
-                <img src="./img/matt.jpg" alt="img" style="border-radius: 50%100px" class="sticky z-10">
-            </div>
-            <div class="relative mt-0 md:mt-12 lg:mt-0 basis-1/2 ">
-                <div class="mx-auto my-4 pr-8">
-                    <h2 class="heading !leading-normal text-2xl lg:text-3xl">
-                        Dr. Matthew Hallowell <br> Co-Founder, Strategic Advisor
-
-                        <a href="https://www.linkedin.com/in/matthew-hallowell-2857a17/" class="social" target="blank">
-                        <svg width="19" height="17" viewBox="0 0 17 16">
-                        <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z"></path>
-                        </svg>
-                        </a>
-
-                        <a href="https://scholar.google.com/citations?user=qKn2a9EAAAAJ&hl=en" class="social" target="_blank">
-                        <img src="./img/scholar.png" width="16" height="13">
-                        </a>
-
-
-                    </h2>
-                    <p class="text-gray-500 dark:text-gray-400 opacity-90 text-base">
-                        Matt is a President's Teaching Scholar and Endowed Professor of Construction Engineering at the University of Colorado at Boulder. He earned a BS and MS in Civil Engineering and a PhD with a focus on Construction Engineering and Occupational Safety and Health. Before his academic career, he worked in construction as a laborer, project engineer, and quality inspector.
-                        <br>
-                        Matt specializes in construction safety research, with an emphasis on the science of safety. He has published over 100 peer-reviewed journal articles on energy-based hazard recognition, safety leading indicators, safety risk assessment, predictive analytics, and precursor analysis. For his research, he has received the National Science Foundation CAREER Award, the inaugural Thomas F. Farrell, II Safety Leadership and Innovation Award, and the Construction Industry Institute Outstanding Researcher Award.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-<div class="py-20 md:py-24 bg-[#efefef] dark:bg-[#0b113a]" id="council">
-  <div class="container px-4 md:px-10 lg:px-0 mx-auto">
-
-    <!-- Text block (half width) -->
-    <div class="lg:w-1/2 2xl:w-1/2 mb-16 text-center mx-auto">
-      <h2 class="heading !leading-normal text-3xl lg:text-4xl">SafetyAI Council</h2>
-
-      <p class="text-neutral-600 dark:text-gray-400 text-lg lg:text-xl font-medium leading-normal my-4">
-        Joining the SafetyAI council is the opportunity to participate in an industry R&D consortium with collaborative benefits: member companies are an integral part of our research and development process, by providing use cases, sharing accident datasets to improve injury prediction models (Safer Together approach), influencing research directions, and testing web apps in the field.
-
-        <br>Updates from the most recent council meetings:
-        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 01-18-24.pdf" target="_blank"><u>Q1'24</u></a>,
-        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 04-09-24.pdf" target="_blank"><u>Q2'24</u></a>,
-        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 08-22-24.pdf" target="_blank"><u>Q3'24</u></a>,
-        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 12-18-24.pdf" target="_blank"><u>Q4'24</u></a>,
-        <a href="https://safetyai.io/documents/SafetyAI Council Meeting 04-08-25.pdf" target="_blank"><u>Q1'25</u></a>.
-
-      </p>
-    
-      <p class="text-neutral-600 dark:text-gray-400 text-lg lg:text-xl font-medium leading-normal my-4">
-      <a href="https://arxiv.org/pdf/2301.03567" target="_blank"><u>Safer Together Initiative</u></a>: after anonymization and normalization, predictive models are trained on the aggregated datasets of the Council members. These community models (aka "Super Models") outperform the company-specific models at predicting injury characteristics most of the time, while also generating finer-grained forecasts. The SafetyAI Council's Super Models tackle the holy grail of safety cross-organizational learning and dissemination in the construction industry. Models are available in all of SafetyAI's web apps, and as an API.
-      </p>
-
-    <div class="flex flex-col lg:flex-row items-center justify-center mt-2 p-2">
-      <a href="mailto:info@safetyai.io" class="btn bg-[#4a6cf7]">Contact Us</a>
-    </div>
-
-    </div>
-
-    <div class="flex flex-wrap justify-center items-center gap-6 mt-12">
-
-      <div class="hidden dark:block"><img src="./img/member_logos/ameren-dark.png" alt="BMWC" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/ameren.png" alt="BMWC" class="h-[100px] w-44 object-contain"></div>
-
-      <div class="hidden dark:block"><img src="./img/member_logos/BMWC-dark.png" alt="BMWC" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/BMWC.png" alt="BMWC" class="h-[100px] w-44 object-contain"></div>
-
-      <div class="hidden dark:block"><img src="./img/member_logos/bird-dark.png" alt="Bird" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/bird.png" alt="Bird" class="h-[100px] w-44 object-contain"></div>
-
-      <!--
-      <div class="hidden dark:block"><img src="./img/member_logos/enbridge-dark.png" alt="Enbridge" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/enbridge.png" alt="Enbridge" class="h-[100px] w-44 object-contain"></div>
-      -->
-
-      <div class="hidden dark:block"><img src="./img/member_logos/entergy-dark.png" alt="Entergy" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/entergy.png" alt="Entergy" class="h-[100px] w-44 object-contain"></div>
-
-      <div class="hidden dark:block"><img src="./img/member_logos/fortis-dark.png" alt="Fortis" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/fortis.png" alt="Fortis" class="h-[100px] w-44 object-contain"></div>
-
-      <div class="hidden dark:block"><img src="./img/member_logos/graham-dark.png" alt="Graham" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/graham.png" alt="Graham" class="h-[100px] w-44 object-contain"></div>
-
-      <div class="hidden dark:block"><img src="./img/member_logos/sundt-dark.png" alt="Sundt" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/sundt.png" alt="Sundt" class="h-[100px] w-44 object-contain"></div>
-
-      <div class="hidden dark:block"><img src="./img/member_logos/tce-dark.png" alt="TCE" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/tce.png" alt="TCE" class="h-[100px] w-44 object-contain"></div>
-
-      <!--
-      <div class="hidden dark:block"><img src="./img/member_logos/tfmc-dark.png" alt="TFMC" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/tfmc.png" alt="TFMC" class="h-[100px] w-44 object-contain"></div>
-      -->
-
-      <div class="hidden dark:block"><img src="./img/member_logos/tva-dark.png" alt="TVA" class="h-[100px] w-44 object-contain"></div>
-      <div class="block dark:hidden"><img src="./img/member_logos/tva.png" alt="TVA" class="h-[100px] w-44 object-contain"></div>
-    </div>
-
-  </div>
-</div>
-
-
-
-
-    <div class="py-20 md:py-24 bg-white dark:bg-dark" id="pricing">
-        <div class="container px-4 md:px-10 lg:px-0 mx-auto">
-            <div class="lg:w-1/2 2xl:w-1/2 mb-16 text-center mx-auto">
-                <h2 class="heading !leading-normal text-3xl lg:text-4xl">Pricing Tiers</h2>
-
-                <p class="text-neutral-600 dark:text-gray-400 text-lg lg:text-xl font-medium leading-normal my-4">
-                SafetyAI is entirely member-funded, with no external investors, to keep our research focused on long-term benefits, rather than on short-term profit.
-                For this model to work, each organization needs to contribute proportionally to its capacity to support and benefit from innovation.
-                </p>
-
-
-            </div>
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-6 lg:px-6 mt-8 ">
-                <div class="price-table ml-0 lg:ml-8">
-                    <div class="price-title">
-                        <div class="flex justify-between mb-4">
-                            <h3 class="text-neutral-900 dark:text-white font-bold text-3xl">$6k <span
-                                    class="text-gray-500">/year</span></h3>
-                            <h4 class="text-right text-neutral-900 dark:text-white font-medium text-2xl">Small</h4>
-                        </div>
-                        <p class="text-gray-400 text-opacity-90 text-base font-medium">For small companies to use ChatSafetyAI without sitting on the Council.
-                        </p>
-                        <hr class="my-10 bg-gray-600 text-gray-600 w-full opacity-30">
-                    </div>
-                    <div class="price-description">
-                        <ul>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                                1B tokens of ChatSafetyAI
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               Updates and support
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               Community predictive models
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="absolute bottom-0 right-0">
-                        <svg width="179" height="158" viewBox="0 0 179 158" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.5"
-                                  d="M75.0002 63.256C115.229 82.3657 136.011 137.496 141.374 162.673C150.063 203.47 207.217 197.755 202.419 167.738C195.393 123.781 137.273 90.3579 75.0002 63.256Z"
-                                  fill="url(#paint0_linear_70:153)"></path>
-                            <path opacity="0.3"
-                                  d="M178.255 0.150879C129.388 56.5969 134.648 155.224 143.387 197.482C157.547 265.958 65.9705 295.709 53.1024 246.401C34.2588 174.197 100.939 83.7223 178.255 0.150879Z"
-                                  fill="url(#paint1_linear_70:153)"></path>
-                            <defs>
-                                <linearGradient id="paint0_linear_70:153" x1="69.6694" y1="29.9033" x2="196.108"
-                                                y2="83.2919" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4A6CF7" stop-opacity="0.62"></stop>
-                                    <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                                </linearGradient>
-                                <linearGradient id="paint1_linear_70:153" x1="165.348" y1="-75.4466" x2="-3.75136"
-                                                y2="103.645" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4A6CF7" stop-opacity="0.62"></stop>
-                                    <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                </div>
-
-
-
-
-                <div class="price-table ml-0 lg:ml-8">
-                    <div class="price-title">
-                        <div class="flex justify-between mb-4">
-                            <h3 class="text-neutral-900 dark:text-white font-bold text-3xl">$11k <span
-                                    class="text-gray-500">/year</span></h3>
-                            <h4 class="text-right text-neutral-900 dark:text-white font-medium text-2xl">Medium</h4>
-                        </div>
-
-
-                        <p class="text-gray-400 text-opacity-90 text-base font-medium">For medium companies to use ChatSafetyAI without sitting on the Council.
-                        </p>
-                        <hr class="my-10 bg-gray-600 text-gray-600 w-full opacity-30">
-                    </div>
-                    <div class="price-description">
-                        <ul>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                                2B tokens of ChatSafetyAI
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               All of the small tier, plus:
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               Custom predictive models
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="absolute bottom-0 right-0">
-                        <svg width="179" height="158" viewBox="0 0 179 158" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.5"
-                                  d="M75.0002 63.256C115.229 82.3657 136.011 137.496 141.374 162.673C150.063 203.47 207.217 197.755 202.419 167.738C195.393 123.781 137.273 90.3579 75.0002 63.256Z"
-                                  fill="url(#paint0_linear_70:153)"></path>
-                            <path opacity="0.3"
-                                  d="M178.255 0.150879C129.388 56.5969 134.648 155.224 143.387 197.482C157.547 265.958 65.9705 295.709 53.1024 246.401C34.2588 174.197 100.939 83.7223 178.255 0.150879Z"
-                                  fill="url(#paint1_linear_70:153)"></path>
-                            <defs>
-                                <linearGradient id="paint0_linear_70:153" x1="69.6694" y1="29.9033" x2="196.108"
-                                                y2="83.2919" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4A6CF7" stop-opacity="0.62"></stop>
-                                    <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                                </linearGradient>
-                                <linearGradient id="paint1_linear_70:153" x1="165.348" y1="-75.4466" x2="-3.75136"
-                                                y2="103.645" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4A6CF7" stop-opacity="0.62"></stop>
-                                    <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                </div>
-
+    <section id="chat" style="background-color: var(--accent-bg);">
+        <div class="container">
+            
+            <h2 class="text-center">ChatSafetyAI</h2>
+            
+            <div class="text-center" style="max-width: 900px; margin: 0 auto 50px auto; font-size: 1.1rem; color: var(--text-muted);">
                 
-                <div class="price-table ml-0 lg:ml-8">
-                    <div class="price-title">
-                        <div class="flex justify-between mb-4">
-                            <h3 class="text-neutral-900 dark:text-white font-bold text-3xl">$19k <span
-                                    class="text-gray-500">/year</span></h3>
-                            <h4 class="text-right text-neutral-900 dark:text-white font-medium text-2xl">Large</h4>
-                        </div>
-
-
-                        <p class="text-gray-400 text-opacity-90 text-base font-medium">For large companies interested in supporting and participating in R&D.
-                        </p>
-                        <hr class="my-10 bg-gray-600 text-gray-600 w-full opacity-30">
-                    </div>
-                    <div class="price-description">
-                        <ul>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                                4B tokens of ChatSafetyAI
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               All of the medium tier, plus:
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               Seat on the SafetyAI Council
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                                SafetyAI Dashboard & Assistant
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               Option to deploy in-house
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="absolute bottom-0 right-0">
-                        <svg width="179" height="158" viewBox="0 0 179 158" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.5"
-                                  d="M75.0002 63.256C115.229 82.3657 136.011 137.496 141.374 162.673C150.063 203.47 207.217 197.755 202.419 167.738C195.393 123.781 137.273 90.3579 75.0002 63.256Z"
-                                  fill="url(#paint0_linear_70:153)"></path>
-                            <path opacity="0.3"
-                                  d="M178.255 0.150879C129.388 56.5969 134.648 155.224 143.387 197.482C157.547 265.958 65.9705 295.709 53.1024 246.401C34.2588 174.197 100.939 83.7223 178.255 0.150879Z"
-                                  fill="url(#paint1_linear_70:153)"></path>
-                            <defs>
-                                <linearGradient id="paint0_linear_70:153" x1="69.6694" y1="29.9033" x2="196.108"
-                                                y2="83.2919" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4A6CF7" stop-opacity="0.62"></stop>
-                                    <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                                </linearGradient>
-                                <linearGradient id="paint1_linear_70:153" x1="165.348" y1="-75.4466" x2="-3.75136"
-                                                y2="103.645" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4A6CF7" stop-opacity="0.62"></stop>
-                                    <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
+                <div class="en-text">
+                    <p>ChatSafetyAI is the ChatGPT for all OHSE tasks on the field. Powered by cutting-edge LLMs and the SafetyAI Community's <a href="#council" style="text-decoration: underline; color: var(--primary-color);">Super Predictive Models</a>, it accepts text queries, audio, and documents in English, Spanish, French, Hindi, Portuguese and Arabic, as well as photos. Custom databases can also be created to let ChatSafetyAI respond based on your own documentation.
+                    </p>
+                    <p style="margin-top: 15px; font-weight: 600;">Active development since February 2023!</p>
                 </div>
 
+                <div class="fr-text">
+                    <p>ChatSafetyAI est le ChatGPT pour toutes les tâches SST sur le terrain. Propulsé par des LLMs de pointe et les <a href="#council" style="text-decoration: underline; color: var(--primary-color);">Super Modèles Prédictifs</a> de la communauté SafetyAI, il accepte les requêtes textuelles, l'audio et les documents en Anglais, Espagnol, Français, Hindi, Portugais et Arabe, ainsi que les photos. Des bases de données personnalisées peuvent être créées pour que ChatSafetyAI réponde selon votre propre documentation.
+                    </p>
+                    <p style="margin-top: 15px; font-weight: 600;">En développement actif depuis Février 2023 !</p>
+                </div>
 
-                <div class="price-table ml-0 lg:ml-8">
-                    <div class="price-title">
-                        <div class="flex justify-between mb-4">
-                            <h3 class="text-neutral-900 dark:text-white font-bold text-3xl">$32k <span
-                                    class="text-gray-500">/year</span></h3>
-                            <h4 class="text-right text-neutral-900 dark:text-white font-medium text-2xl">Big</h4>
+                <div style="margin-top: 5px; font-size: 0.95rem;">
+                    <a href="updates/index.html" style="color:var(--primary-color); text-decoration:underline; font-weight: 500;">
+                        <span class="en-text">View all updates&rarr;</span>
+                        <span class="fr-text">Voir toutes les actualités&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex-row" style="gap: 15px; justify-content: center; margin-bottom: 60px;">
+                <a href="https://safetyapp.shinyapps.io/chatsafetyai_demo/" target="_blank" class="btn-primary en-text">Demo App</a>
+                <a href="https://safetyapp.shinyapps.io/chatsafetyai_demo/" target="_blank" class="btn-primary fr-text">App de Démo</a>
+
+                <a href="https://safetyapp.shinyapps.io/chatsafetyai/" target="_blank" class="btn-primary en-text" 
+                   style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); box-shadow: none;">
+                   Prod App
+                </a>
+                <a href="https://safetyapp.shinyapps.io/chatsafetyai/" target="_blank" class="btn-primary fr-text" 
+                   style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); box-shadow: none;">
+                   Appli de Prod
+                </a>
+                
+                <a href="https://safetyapp.shinyapps.io/chatsafetyai_dashboard_new/" target="_blank" class="btn-primary en-text">Usage Analytics</a>
+                <a href="https://safetyapp.shinyapps.io/chatsafetyai_dashboard_new/" target="_blank" class="btn-primary fr-text">Analytique d'Usage</a>
+            </div>
+
+            <h3 class="en-text text-center" style="margin-bottom: 30px; font-size: 1.5rem; font-weight:700;">Functionalities</h3>
+            <h3 class="fr-text text-center" style="margin-bottom: 30px; font-size: 1.5rem; font-weight:700;">Fonctionnalités</h3>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-bottom: 80px;">
+                <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Photo HECA</span><span class="fr-text">Photo HECA</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/PK4SD2G3iQI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Prejob Brief</span><span class="fr-text">Briefing de Pré-tâche</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/cJKmNwSlxqM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                 <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Custom Databases</span><span class="fr-text">Bases de Données Perso</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/hGjGtE-P1Sg" frameborder="0" allowfullscreen></iframe>
+                </div>
+                 <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Photo Annotation</span><span class="fr-text">Annotation Photo</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/uMGpk7ZOy_8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                 <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Injury Prediction</span><span class="fr-text">Prédiction de Blessure</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/TvI7y7jlWAY" frameborder="0" allowfullscreen></iframe>
+                </div>
+                 <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Presentation Gen</span><span class="fr-text">Génération de Présentation</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/3fGSyktWg4s" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="grid-layout">
+                
+                <div class="card">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M2 12h5"/><path d="M17 12h5"/><path d="M12 2v5"/><path d="M12 17v5"/><circle cx="12" cy="12" r="10"/></svg>
+                    <h3>
+                        <span class="en-text">Scientific Expertise</span>
+                        <span class="fr-text">Expertise Scientifique</span>
+                    </h3>
+                    <p class="en-text">Developed by leading researchers (200+ papers, 14k citations). Before the AI boom, Dr. Tixier and Dr. Hallowell led the way in safety ML.</p>
+                    <p class="fr-text">Développé par des chercheurs de renom (200+ articles, 14k citations). Avant le boom de l'IA, Dr. Tixier et Dr. Hallowell étaient pionniers.</p>
+                </div>
+
+                <div class="card">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <h3>
+                        <span class="en-text">Made by the Industry</span>
+                        <span class="fr-text">Fait par l'Industrie</span>
+                    </h3>
+                    <p class="en-text">The <a href="#council" style="text-decoration:underline;">SafetyAI Council</a> provides use cases and accident datasets to train Super Predictive Models (Safer Together initiative).</p>
+                    <p class="fr-text">Le <a href="#council" style="text-decoration:underline;">Conseil SafetyAI</a> fournit des cas d'usage et des données pour entraîner nos Super Modèles Prédictifs.</p>
+                </div>
+
+                <div class="card">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    <h3>
+                        <span class="en-text">Built for the Workplace</span>
+                        <span class="fr-text">Construit pour le Travail</span>
+                    </h3>
+                    <p class="en-text">Guardrails block non-work queries. Auto-redaction of PII. Never uses data for training. Deployed on MS Azure or AWS.</p>
+                    <p class="fr-text">Garde-fous bloquant le hors-sujet. Rédaction auto des données sensibles. Aucune utilisation des données pour l'entraînement.</p>
+                </div>
+
+                <div class="card">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1"></path><path d="M20.87 18c-2.68 1.45-5.56 2-8.37 2s-5.7-.55-8.37-2"></path><path d="M2 12h20"></path></svg>
+                    <h3>
+                        <span class="en-text">Flexible & Expandable</span>
+                        <span class="fr-text">Flexible & Extensible</span>
+                    </h3>
+                    <p class="en-text">Customizable per company via API. Knowledge of your docs, generation of PPTs using your templates, and system integration.</p>
+                    <p class="fr-text">Personnalisable par entreprise via API. Connaissance de vos docs, génération de PPTs selon vos templates et intégration système.</p>
+                </div>
+                
+                 <div class="card">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+                    <h3>
+                        <span class="en-text">Engineered Knowledge</span>
+                        <span class="fr-text">Connaissances & Prompts</span>
+                    </h3>
+                    <p class="en-text">We curate cutting-edge safety knowledge and craft precise prompts to ensure reliable answers and jargon understanding.</p>
+                    <p class="fr-text">Nous curons les connaissances de sécurité de pointe et créons des prompts précis pour assurer des réponses fiables.</p>
+                </div>
+
+                 <div class="card">
+                    <svg class="icon" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h3>
+                        <span class="en-text">Best of Each LLM</span>
+                        <span class="fr-text">Le Meilleur de Chaque LLM</span>
+                    </h3>
+                    <p class="en-text">We capitalize on the respective strengths of multiple cutting-edge LLMs like GPT and Gemini.</p>
+                    <p class="fr-text">Nous capitalisons sur les forces respectives de multiples LLMs de pointe comme GPT et Gemini.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="dashboard">
+        <div class="container">
+            
+            <h2 class="text-center">
+                <span class="en-text">SafetyAI Dashboard</span>
+                <span class="fr-text">Tableau de Bord SafetyAI</span>
+            </h2>
+            
+            <div class="text-center" style="max-width: 900px; margin: 0 auto 50px auto; font-size: 1.1rem; color: var(--text-muted);">
+                
+                <div class="en-text">
+                    <p>
+                        The SafetyAI Dashboard is an interactive web application for analyzing and visualizing a company's incident and observation dataset (narratives + safety outcomes) using natural language processing, network analysis, time series analysis, and other data mining methods.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        The Dashboard also provides an interface to the SafetyAI predictive models (company custom and community), and to a binary and semantic narrative search engine.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        All methods were developed as part of multiyear research projects leading to peer-reviewed publications. All methods have been validated on large-scale, real-world incident datasets.
+                    </p>
+                </div>
+
+                <div class="fr-text">
+                    <p>
+                        Le Tableau de Bord SafetyAI est une application web interactive pour analyser et visualiser les données d'incidents et d'observations (récits + résultats de sécurité) utilisant le traitement du langage naturel (NLP), l'analyse de réseaux, l'analyse de séries temporelles et le data mining.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        Le tableau de bord offre également une interface vers les modèles prédictifs SafetyAI (personnalisés et communautaires), ainsi qu'un moteur de recherche narratif binaire et sémantique.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        Toutes ces méthodes sont issues de projets de recherche pluriannuels et de publications évaluées par des pairs. Elles ont été validées sur des jeux de données réels à grande échelle.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="flex-row" style="gap: 15px; justify-content: center; margin-bottom: 60px;">
+                <a href="https://safetyapp.shinyapps.io/safety_ai_dashboard/" target="_blank" class="btn-primary en-text">Go to Prod App</a>
+                <a href="https://safetyapp.shinyapps.io/safety_ai_dashboard/" target="_blank" class="btn-primary fr-text">Accéder à l'App</a>
+            </div>
+
+            <h3 class="en-text text-center" style="margin-bottom: 30px; font-size: 1.5rem; font-weight:700;">Functionalities</h3>
+            <h3 class="fr-text text-center" style="margin-bottom: 30px; font-size: 1.5rem; font-weight:700;">Fonctionnalités</h3>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+                
+                <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Stats & Time Series</span><span class="fr-text">Stats & Séries Temporelles</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/WoSZUFeIkWQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Word Networks</span><span class="fr-text">Réseaux de Mots</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/ZZfFsG-d2R0" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Attribute Networks</span><span class="fr-text">Réseaux d'Attributs</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/2Pxg2NrOPq4" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Risk Assessment</span><span class="fr-text">Évaluation des Risques</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/nmZYpCwmRHk" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Predictive Models</span><span class="fr-text">Modèles Prédictifs</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/XqeiedW2R_A" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Binary & Semantic Search</span><span class="fr-text">Recherche Binaire & Sémantique</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://www.youtube.com/embed/brSKMilbcqc" frameborder="0" allowfullscreen></iframe>
+                </div>
+                
+                 <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">Learning Precursors</span><span class="fr-text">Apprentissage des Précurseurs</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://youtube.com/embed/pQycF6ZsUcw" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<section id="assistant" style="background-color: var(--accent-bg);">
+        <div class="container">
+            
+            <h2 class="text-center">SafetyAI Assistant</h2>
+            
+            <div class="text-center" style="max-width: 900px; margin: 0 auto 50px auto; font-size: 1.1rem; color: var(--text-muted);">
+                
+                <div class="en-text">
+                    <p>
+                        The SafetyAI assistant is a simplified version of the <a href="#dashboard" style="color:var(--primary-color); text-decoration:underline;">SafetyAI Dashboard</a> that features the functionalities that are the most useful onsite, with a user interface optimized for smartphones, and voice recognition capabilities.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        By answering a few simple questions about work conditions and the task at hand, the SafetyAI Assistant provides on-site personnel with: (i) a risk assessment, (ii) predictions of the most likely accident characteristics, and (iii) historical injury cases from similar work.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        This information is very useful during, e.g., pre-job safety meetings.
+                    </p>
+                </div>
+
+                <div class="fr-text">
+                    <p>
+                        L'Assistant SafetyAI est une version simplifiée du <a href="#dashboard" style="color:var(--primary-color); text-decoration:underline;">Tableau de Bord SafetyAI</a> regroupant les fonctionnalités les plus utiles sur le terrain, avec une interface optimisée pour les smartphones et la reconnaissance vocale.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        En répondant à quelques questions simples sur les conditions de travail, l'Assistant fournit au personnel : (i) une évaluation des risques, (ii) des prédictions sur les accidents les plus probables, et (iii) des cas historiques similaires.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        Ces informations sont très utiles lors des réunions de sécurité avant travail (pre-job brief).
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="flex-row" style="gap: 15px; justify-content: center; margin-bottom: 60px;">
+                <a href="https://safetyapp.shinyapps.io/safety_ai_assistant_public/" target="_blank" class="btn-primary en-text">Demo App</a>
+                <a href="https://safetyapp.shinyapps.io/safety_ai_assistant_public/" target="_blank" class="btn-primary fr-text">Appli Démo</a>
+                
+                <a href="https://safetyapp.shinyapps.io/safety_ai_assistant/" target="_blank" class="btn-primary en-text" 
+                   style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); box-shadow: none;">
+                   Prod App
+                </a>
+                <a href="https://safetyapp.shinyapps.io/safety_ai_assistant/" target="_blank" class="btn-primary fr-text" 
+                   style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); box-shadow: none;">
+                   Appli de Prod
+                </a>
+
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+                <div class="text-center" style="flex: 0 1 400px; max-width: 100%;">
+                    <h4 style="margin-bottom: 10px; font-weight: 600;">
+                        <span class="en-text">SafetyAI Assistant Demo</span>
+                        <span class="fr-text">Démo de l'Assistant</span>
+                    </h4>
+                    <iframe style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;" src="https://youtube.com/embed/U9SZIwLrrNI" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            
+            <h2 class="text-center">
+                <span class="en-text">Team</span>
+                <span class="fr-text">Équipe</span>
+            </h2>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; margin-bottom: 80px;">
+                
+                <div style="flex: 0 0 auto; width: 200px; text-align: center;">
+                    <img src="assets/img/antoine.jpg" alt="Antoine Tixier" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-md);">
+                </div>
+
+                <div style="flex: 1 1 400px; min-width: 280px;">
+                    <h3 style="font-size: 1.75rem; margin-bottom: 5px; font-weight: 700;">Dr. Antoine Tixier</h3>
+                    
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px; color: var(--primary-color); font-weight: 600;">
+                        <span>
+                            <span class="en-text">Co-Founder, CEO</span>
+                            <span class="fr-text">Co-Fondateur, PDG</span>
+                        </span>
+                        
+                        <a href="https://www.linkedin.com/in/antoine-tixier-73139138a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJaxK%2BP6nT%2F2nqDV5fx224Q%3D%3D" target="_blank" style="display: flex; align-items: center;">
+                            <svg width="20" height="20" viewBox="0 0 17 16" fill="var(--primary-color)">
+                                <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="https://scholar.google.com/citations?user=l5JRP-kAAAAJ&hl=en" target="_blank" style="display: flex; align-items: center;">
+                            <img src="assets/img/scholar.png" width="24" height="24" alt="Google Scholar">
+                        </a>
+                    </div>
+
+                    <div style="font-size: 1rem; color: var(--text-muted); line-height: 1.7;">
+                        <div class="en-text">
+                            Antoine's PhD (2013-15) focused on how to predict the characteristics of construction accidents with machine learning.
+                            <br><br>
+                            Between 2015 and 2020, while a postdoc researcher in deep learning and natural language processing, Antoine started to work on SafetyAI in his free time. He built on his PhD research to develop new incident data analysis and visualization techniques and better prediction methods, and created the <a href="#dashboard" style="text-decoration: underline; color: var(--primary-color);">SafetyAI Dashboard app</a>.
+                            <br><br>
+                            In 2020, Antoine started working full-time on SafetyAI and created the <a href="#assistant" style="text-decoration: underline; color: var(--primary-color);">SafetyAI Assistant app</a> and the Safer Together approach (community predictive models). At the beginning of 2023, Antoine created <a href="#chat" style="text-decoration: underline; color: var(--primary-color);">ChatSafetyAI</a>, the ChatGPT for OHSE.
+                            <br><br>
+                            Antoine is in charge of every aspect of SafetyAI, from conducting research, training models and writing papers, to full-stack development, cloud architecture and deployment, online content, and clients (tech, strategy, legal)...
                         </div>
 
-
-                        <p class="text-gray-400 text-opacity-90 text-base font-medium">For big companies interested in supporting and participating in R&D.
-                        </p>
-                        <hr class="my-10 bg-gray-600 text-gray-600 w-full opacity-30">
-                    </div>
-                    <div class="price-description">
-                        <ul>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                                8B tokens of ChatSafetyAI
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               All of the large tier, plus:
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               Push your use cases in priority
-                            </li>
-                            <li class="price-option">
-                              <span class="price-list-style">
-                                 <svg width="12" height="10" viewBox="0 0 8 6" class="fill-[#4a6cf7]">
-                                    <path d="M2.90567 6.00024C2.68031 6.00024 2.48715 5.92812 2.294 5.74764L0.169254 3.43784C-0.0560926 3.18523 -0.0560926 2.78827 0.169254 2.53566C0.39461 2.28298 0.74873 2.28298 0.974086 2.53566L2.90567 4.66497L7.02642 0.189715C7.25175 -0.062913 7.60585 -0.062913 7.83118 0.189715C8.0566 0.442354 8.0566 0.839355 7.83118 1.09198L3.54957 5.78375C3.32415 5.92812 3.09882 6.00024 2.90567 6.00024Z"></path>
-                                 </svg>
-                              </span>
-                               Highest level of customization in ChatSafetyAI
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="absolute bottom-0 right-0">
-                        <svg width="179" height="158" viewBox="0 0 179 158" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.5"
-                                  d="M75.0002 63.256C115.229 82.3657 136.011 137.496 141.374 162.673C150.063 203.47 207.217 197.755 202.419 167.738C195.393 123.781 137.273 90.3579 75.0002 63.256Z"
-                                  fill="url(#paint0_linear_70:153)"></path>
-                            <path opacity="0.3"
-                                  d="M178.255 0.150879C129.388 56.5969 134.648 155.224 143.387 197.482C157.547 265.958 65.9705 295.709 53.1024 246.401C34.2588 174.197 100.939 83.7223 178.255 0.150879Z"
-                                  fill="url(#paint1_linear_70:153)"></path>
-                            <defs>
-                                <linearGradient id="paint0_linear_70:153" x1="69.6694" y1="29.9033" x2="196.108"
-                                                y2="83.2919" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4A6CF7" stop-opacity="0.62"></stop>
-                                    <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                                </linearGradient>
-                                <linearGradient id="paint1_linear_70:153" x1="165.348" y1="-75.4466" x2="-3.75136"
-                                                y2="103.645" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4A6CF7" stop-opacity="0.62"></stop>
-                                    <stop offset="1" stop-color="#4A6CF7" stop-opacity="0"></stop>
-                                </linearGradient>
-                            </defs>
-                        </svg>
+                        <div class="fr-text">
+                            Le doctorat d'Antoine (2013-15) portait sur la prédiction des caractéristiques des accidents de construction grâce au machine learning.
+                            <br><br>
+                            Entre 2015 et 2020, alors chercheur post-doctorant en deep learning et NLP, Antoine a commencé à travailler sur SafetyAI sur son temps libre. Il s'est appuyé sur ses recherches doctorales pour développer de nouvelles techniques d'analyse et de visualisation de données d'incidents, et a créé l'application <a href="#dashboard" style="text-decoration: underline; color: var(--primary-color);">SafetyAI Dashboard</a>.
+                            <br><br>
+                            En 2020, Antoine a commencé à travailler à temps plein sur SafetyAI et a créé l'application <a href="#assistant" style="text-decoration: underline; color: var(--primary-color);">SafetyAI Assistant</a> et l'approche Safer Together. Début 2023, il a créé <a href="#chat" style="text-decoration: underline; color: var(--primary-color);">ChatSafetyAI</a>, le ChatGPT pour la sécurité au travail.
+                            <br><br>
+                            Antoine est en charge de tous les aspects de SafetyAI, de la recherche et l'entraînement des modèles, au développement full-stack, architecture et déploiement dans le cloud, au contenu web, et aux relations clients (tech, stratégie, juridique)...
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="flex flex-col lg:flex-row items-center justify-center mt-8 p-6">
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+                
+                <div style="flex: 0 0 auto; width: 200px; text-align: center;">
+                    <img src="assets/img/matt.jpg" alt="Matthew Hallowell" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-md);">
+                </div>
 
-        <p class="text-center text-neutral-600 dark:text-gray-400 text-lg lg:text-xl font-medium leading-normal my-4">
-          Notes: (i) For large+ organizations, it's possible to pilot ChatSafetyAI for 3 months over SaaS or in-house, at the cost of $6k, before committing for a full year. <br> (ii) Token budgets apply only to SaaS use. With in-house deployment (Azure or AWS), the hosting organization manages its own consumption.
-        </p>
+                <div style="flex: 1 1 400px; min-width: 280px;">
+                    <h3 style="font-size: 1.75rem; margin-bottom: 5px; font-weight: 700;">Dr. Matthew Hallowell</h3>
+                    
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px; color: var(--primary-color); font-weight: 600;">
+                        <span>
+                            <span class="en-text">Co-Founder, Strategic Advisor</span>
+                            <span class="fr-text">Co-Fondateur, Conseiller Stratégique</span>
+                        </span>
+                        
+                        <a href="https://www.linkedin.com/in/matthew-hallowell-2857a17/" target="_blank" style="display: flex; align-items: center;">
+                            <svg width="20" height="20" viewBox="0 0 17 16" fill="var(--primary-color)">
+                                <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z"></path>
+                            </svg>
+                        </a>
 
-        </div>
-
-
-        <div class="flex flex-col lg:flex-row items-center justify-center mt-4 p-2">
-
-          <a href="mailto:info@safetyai.io" class="btn bg-[#4a6cf7]">Contact Us</a>
-
-        </div>
-
-        <div class="flex flex-col lg:flex-row items-center justify-center mt-4 p-2">
-
-          <iframe width="600" height="550" src="https://e1c0387c.sibforms.com/serve/MUIFACsxtRkbx7AbSAj_Fq5dEAxaWsF4jTMD1KjOHcNZXcglAcn6aqdgiR_E7-XSOSDf0E5BMJVUnjEAzYpaAoBfm9Jx1vj_ws051bobs4zG6iN1kwvCfAygX0ql5yP6W-wIaLvtRPgmU_yFNbdguEK-PVD0dBeFckTH4hOHbGVDfe7zr6RHzCMK3Ejjq4JuR5I7uG517HdHDxVUWw==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
-
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-    <div class="footer" id="footer">
-        <div class="top-content py-16 px-1 lg:px-10 bg-[#4A6CF7] bg-opacity-5">
-            <div class="container flex md:flex-row flex-wrap lg:flex-nowrap items-start justify-between px-4 mx-auto">
-                <div class="basis-full lg:basis-1/3 mb-6 lg:mb-0">
-                    <div class="footer-logo mb-7">
-                        <img src="./img/logo-light.png" alt="logo" class="hidden dark:block">
-                        <img src="./img/logo.png" alt="logo" class="block dark:hidden">
+                        <a href="https://scholar.google.com/citations?user=qKn2a9EAAAAJ&hl=en" target="_blank" style="display: flex; align-items: center;">
+                            <img src="assets/img/scholar.png" width="24" height="24" alt="Google Scholar">
+                        </a>
                     </div>
-                    <p class="text-gray-500 dark:text-gray-400 opacity-90 text-lg">SafetyAI: State of the Art AI for Field-Based Occupational Safety.
+
+                    <div style="font-size: 1rem; color: var(--text-muted); line-height: 1.7;">
+                        <div class="en-text">
+                            Matt is a President's Teaching Scholar and Endowed Professor of Construction Engineering at the University of Colorado at Boulder. He earned a BS and MS in Civil Engineering and a PhD with a focus on Construction Engineering and Occupational Safety and Health. Before his academic career, he worked in construction as a laborer, project engineer, and quality inspector.
+                            <br><br>
+                            Matt specializes in construction safety research, with an emphasis on the science of safety. He has published over 100 peer-reviewed journal articles on energy-based hazard recognition, safety leading indicators, safety risk assessment, predictive analytics, and precursor analysis. For his research, he has received the National Science Foundation CAREER Award, the inaugural Thomas F. Farrell, II Safety Leadership and Innovation Award, and the Construction Industry Institute Outstanding Researcher Award.
+                        </div>
+
+                        <div class="fr-text">
+                            Matt est "President's Teaching Scholar" et Professeur titulaire en ingénierie de la construction à l'Université du Colorado à Boulder. Il a obtenu un doctorat axé sur l'ingénierie de la construction et la santé et sécurité au travail. Avant sa carrière universitaire, il a travaillé dans la construction comme ouvrier, ingénieur projet et inspecteur qualité.
+                            <br><br>
+                            Matt se spécialise dans la recherche sur la sécurité en construction. Il a publié plus de 100 articles sur la reconnaissance des dangers basée sur l'énergie, les indicateurs prévisionnels, l'évaluation des risques et l'analyse prédictive. Pour ses recherches, il a reçu le prix CAREER de la National Science Foundation, le prix Thomas F. Farrell II pour le leadership et l'innovation en sécurité, et le prix du chercheur exceptionnel du Construction Industry Institute.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="council" style="background-color: var(--accent-bg);">
+        <div class="container">
+            
+            <h2 class="text-center">
+                <span class="en-text">SafetyAI Council</span>
+                <span class="fr-text">Conseil SafetyAI</span>
+            </h2>
+
+            <div class="text-center" style="max-width: 900px; margin: 0 auto 50px auto; font-size: 1.1rem; color: var(--text-muted);">
+                
+                <div class="en-text">
+                    <p>
+                        Joining the SafetyAI council is the opportunity to participate in an industry R&D consortium with collaborative benefits: member companies are an integral part of our research and development process, by providing use cases, sharing accident datasets to improve injury prediction models (Safer Together approach), influencing research directions, and testing web apps in the field.
                     </p>
-                    <div class="mt-8">
-                        <a href="https://www.youtube.com/@SafetyAI-Inc" class="social" target="_blank">
-                            <svg width="20" height="16" viewBox="0 0 18 14">
+                    
+                    <p style="margin-top: 15px;">
+                        <a href="https://arxiv.org/pdf/2301.03567" target="_blank" style="color:var(--primary-color); text-decoration:underline;">Safer Together Initiative</a>: after anonymization and normalization, predictive models are trained on the aggregated datasets of the Council members. These community models (aka "Super Models") outperform company-specific models, tackling the holy grail of cross-organizational learning in construction.
+                    </p>
+                </div>
+
+                <div class="fr-text">
+                    <p>
+                        Rejoindre le Conseil SafetyAI, c'est participer à un consortium de R&D industriel : les entreprises membres font partie intégrante de notre processus de développement en fournissant des cas d'usage, en partageant des données d'accidents pour améliorer les modèles prédictifs (approche Safer Together), en influençant la recherche et en testant nos applications sur le terrain.
+                    </p>
+
+                    <p style="margin-top: 15px;">
+                        <a href="https://arxiv.org/pdf/2301.03567" target="_blank" style="color:var(--primary-color); text-decoration:underline;">Initiative Safer Together</a> : après anonymisation et normalisation, les modèles prédictifs sont entraînés sur les données agrégées des membres. Ces "Super Modèles" communautaires surpassent les modèles spécifiques aux entreprises, atteignant le graal de l'apprentissage inter-organisationnel.
+                    </p>
+                </div>
+
+            <div style="margin-top: 15px; font-size: 0.95rem;">
+                <a href="updates/index.html" style="color:var(--primary-color); text-decoration:underline; font-weight: 500;">
+                    <span class="en-text">View all updates&rarr;</span>
+                    <span class="fr-text">Voir toutes les actualités&rarr;</span>
+                </a>
+            </div>
+
+            </div>
+
+
+
+            <div class="flex-row" style="gap: 15px; justify-content: center; margin-bottom: 60px;">
+                <a href="mailto:info@safetyai.io" class="btn-primary en-text">Contact Us</a>
+                <a href="mailto:info@safetyai.io" class="btn-primary fr-text">Contactez-nous</a>
+            </div>
+
+            <h3 class="text-center" style="margin-bottom: 30px; font-size: 1.5rem; font-weight:700;">
+                <span class="en-text">Some Current Members</span>
+                <span class="fr-text">Quelques Membres Actuels</span>
+            </h3>
+
+            <div class="flex-row" style="gap: 20px; justify-content: center; margin-bottom: 60px;">
+                
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/atkins.png" alt="Atkins" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/atkins-dark.png" alt="Atkins" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/bird.png" alt="Bird" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/bird-dark.png" alt="Bird" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/BMWC.png" alt="BMWC" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/BMWC-dark.png" alt="BMWC" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/dominion.png" alt="Dominion" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/dominion-dark.png" alt="Dominion" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/ellisdon.png" alt="EllisDon" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/ellisdon-dark.png" alt="EllisDon" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/graham.png" alt="Graham" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/graham-dark.png" alt="Graham" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/tce.png" alt="TCE" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/tce-dark.png" alt="TCE" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+            </div>
+
+            <h3 class="text-center" style="margin-bottom: 30px; font-size: 1.5rem; font-weight:700;">
+                <span class="en-text">Some Former Members</span>
+                <span class="fr-text">Quelques Anciens Membres</span>
+            </h3>
+
+            <div class="flex-row" style="gap: 20px; justify-content: center;">
+                
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/ameren.png" alt="Ameren" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/ameren-dark.png" alt="Ameren" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/entergy.png" alt="Entergy" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/entergy-dark.png" alt="Entergy" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/fortis.png" alt="Fortis" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/fortis-dark.png" alt="Fortis" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/sundt.png" alt="Sundt" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/sundt-dark.png" alt="Sundt" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+                <div class="logo-item">
+                    <img src="assets/img/member_logos/tva.png" alt="TVA" class="logo-light" style="max-height: 50px; max-width: 80%;">
+                    <img src="assets/img/member_logos/tva-dark.png" alt="TVA" class="logo-dark" style="max-height: 50px; max-width: 80%;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<section id="pricing">
+        <div class="container" style="max-width: 1400px;">
+            
+            <h2 class="text-center">
+                <span class="en-text">Pricing Tiers</span>
+                <span class="fr-text">Cotisations</span>
+            </h2>
+
+            <div class="text-center" style="max-width: 900px; margin: 0 auto 50px auto; font-size: 1.1rem; color: var(--text-muted);">
+                <div class="en-text">
+                    SafetyAI is entirely member-funded, with no external investors, to keep our research focused on long-term benefits rather than short-term profit. For this model to work, each organization contributes proportionally to its capacity to support and benefit from innovation.
+                </div>
+                <div class="fr-text">
+                    SafetyAI est entièrement financé par ses membres, sans investisseurs externes, afin de garder notre recherche concentrée sur les bénéfices à long terme. Pour que ce modèle fonctionne, chaque organisation contribue proportionnellement à sa capacité à soutenir et bénéficier de l'innovation.
+                </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 60px;">
+                
+                <div class="card pricing-card" style="flex: 1 1 220px;">
+                    <h3 style="font-size: 1.4rem; font-weight: 700;">
+                        <span class="en-text">Small</span><span class="fr-text">Petit</span>
+                    </h3>
+                    <div class="price-tag" style="font-size: 2.5rem; margin: 15px 0;">
+                        $6k<span>/year</span>
+                    </div>
+                    <p class="text-center" style="margin-bottom: 20px; font-size: 0.9rem; color: var(--text-muted);">
+                        <span class="en-text">For small companies to use ChatSafetyAI without sitting on the Council.</span>
+                        <span class="fr-text">Pour les petites entreprises utilisant ChatSafetyAI sans siéger au Conseil.</span>
+                    </p>
+                    <ul style="text-align: left; font-size: 0.9rem; line-height: 1.8; list-style: none; padding: 0;">
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">1B tokens of ChatSafetyAI</span><span class="fr-text">1 Md de jetons ChatSafetyAI</span></span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">Updates and support</span><span class="fr-text">Mises à jour et support</span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card pricing-card" style="flex: 1 1 220px;">
+                    <h3 style="font-size: 1.4rem; font-weight: 700;">
+                        <span class="en-text">Medium</span><span class="fr-text">Moyen</span>
+                    </h3>
+                    <div class="price-tag" style="font-size: 2.5rem; margin: 15px 0;">
+                        $11k<span>/year</span>
+                    </div>
+                    <p class="text-center" style="margin-bottom: 20px; font-size: 0.9rem; color: var(--text-muted);">
+                        <span class="en-text">For medium companies to use ChatSafetyAI without sitting on the Council.</span>
+                        <span class="fr-text">Pour les entreprises moyennes utilisant ChatSafetyAI sans siéger au Conseil.</span>
+                    </p>
+                    <ul style="text-align: left; font-size: 0.9rem; line-height: 1.8; list-style: none; padding: 0;">
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">2B tokens of ChatSafetyAI</span><span class="fr-text">2 Mds de jetons ChatSafetyAI</span></span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">All of the small tier</span><span class="fr-text">Tout du niveau Petit</span></span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">Custom predictive models</span><span class="fr-text">Modèles prédictifs perso.</span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card pricing-card" style="flex: 1 1 220px;">
+                    <h3 style="font-size: 1.4rem; font-weight: 700;">
+                        <span class="en-text">Large</span><span class="fr-text">Grand</span>
+                    </h3>
+                    <div class="price-tag" style="font-size: 2.5rem; margin: 15px 0;">
+                        $19k<span>/year</span>
+                    </div>
+                    <p class="text-center" style="margin-bottom: 20px; font-size: 0.9rem; color: var(--text-muted);">
+                        <span class="en-text">For large companies interested in supporting and participating in R&D.</span>
+                        <span class="fr-text">Pour les grandes entreprises souhaitant soutenir et participer à la R&D.</span>
+                    </p>
+                    <ul style="text-align: left; font-size: 0.9rem; line-height: 1.8; list-style: none; padding: 0;">
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">4B tokens of ChatSafetyAI</span><span class="fr-text">4 Mds de jetons ChatSafetyAI</span></span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">Seat on the SafetyAI Council</span><span class="fr-text">Siège au Conseil SafetyAI</span></span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">Push use cases in priority</span><span class="fr-text">Priorisation des cas d'usage</span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card pricing-card" style="flex: 1 1 220px;">
+                    <h3 style="font-size: 1.4rem; font-weight: 700;">
+                        <span class="en-text">Big</span><span class="fr-text">Majeur</span>
+                    </h3>
+                    <div class="price-tag" style="font-size: 2.5rem; margin: 15px 0;">
+                        $32k<span>/year</span>
+                    </div>
+                    <p class="text-center" style="margin-bottom: 20px; font-size: 0.9rem; color: var(--text-muted);">
+                        <span class="en-text">For big companies interested in supporting and participating in R&D.</span>
+                        <span class="fr-text">Pour les entreprises majeures souhaitant soutenir et participer à la R&D.</span>
+                    </p>
+                    <ul style="text-align: left; font-size: 0.9rem; line-height: 1.8; list-style: none; padding: 0;">
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">8B tokens of ChatSafetyAI</span><span class="fr-text">8 Mds de jetons ChatSafetyAI</span></span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">All of the Large tier</span><span class="fr-text">Tout du niveau Grand</span></span>
+                        </li>
+                         <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">Highest customization level</span><span class="fr-text">Niveau de perso. max</span></span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">Dashboard & Assistant apps</span><span class="fr-text">Apps Dashboard & Assistant</span></span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><span class="en-text">Option to deploy in-house</span><span class="fr-text">Option déploiement interne</span></span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center" style="max-width: 1100px; margin: 0 auto 40px auto; font-size: 0.95rem; color: var(--text-muted); font-style: italic;">
+                <div class="en-text">
+                    Notes: (i) For large+ organizations, it's possible to pilot ChatSafetyAI for 3 months over SaaS or in-house ($6k) before committing. 
+                    <br>(ii) Token budgets apply only to SaaS. With in-house deployment (Azure or AWS), the organization manages its own consumption.
+                </div>
+                <div class="fr-text">
+                    Notes : (i) Pour les grandes organisations, il est possible de piloter ChatSafetyAI pendant 3 mois en SaaS ou en interne (6k$) avant de s'engager.
+                    <br>(ii) Les budgets de jetons ne s'appliquent qu'au SaaS. En déploiement interne (Azure ou AWS), l'organisation gère sa propre consommation.
+                </div>
+            </div>
+
+            <div class="flex-row" style="gap: 15px; justify-content: center; margin-bottom: 60px;">
+                <a href="mailto:info@safetyai.io" class="btn-primary en-text">Contact Us</a>
+                <a href="mailto:info@safetyai.io" class="btn-primary fr-text">Contactez-nous</a>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <iframe width="600" height="550" src="https://e1c0387c.sibforms.com/serve/MUIFACsxtRkbx7AbSAj_Fq5dEAxaWsF4jTMD1KjOHcNZXcglAcn6aqdgiR_E7-XSOSDf0E5BMJVUnjEAzYpaAoBfm9Jx1vj_ws051bobs4zG6iN1kwvCfAygX0ql5yP6W-wIaLvtRPgmU_yFNbdguEK-PVD0dBeFckTH4hOHbGVDfe7zr6RHzCMK3Ejjq4JuR5I7uG517HdHDxVUWw==" frameborder="0" scrolling="auto" allowfullscreen style="display: block; max-width: 100%; border-radius: 8px; border: 1px solid var(--border-color); background: #fff;"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <a href="#home" class="logo" style="margin-bottom: 20px; display: inline-block;">
+                        <img src="assets/img/logo.png" alt="SafetyAI" class="logo-light" style="height: 32px;">
+                        <img src="assets/img/logo-light.png" alt="SafetyAI" class="logo-dark" style="height: 32px;">
+                    </a>
+                    
+                    <p style="margin-bottom: 25px;">
+                        <span class="en-text">SafetyAI: State of the Art AI for Field-Based Occupational Safety.</span>
+                        <span class="fr-text">SafetyAI : L'IA de Pointe pour la Sécurité au Travail sur le terrain.</span>
+                    </p>
+
+                    <div class="social-row">
+                        <a href="https://www.youtube.com/@SafetyAI-Inc" target="_blank" aria-label="YouTube">
+                            <svg class="social-icon" viewBox="0 0 18 14">
                                 <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z"></path>
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/company/safetyai-io" class="social" target="_blank">
-                            <svg width="19" height="17" viewBox="0 0 17 16">
+                        <a href="https://www.linkedin.com/company/safetyai-io" target="_blank" aria-label="LinkedIn">
+                            <svg class="social-icon" viewBox="0 0 17 16">
                                 <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z"></path>
                             </svg>
                         </a>
                     </div>
                 </div>
-                <div class="basis-full lg:basis-1/3 mb-6 lg:mb-0">
-                    <h4 class="heading text-xl mb-7">Useful Links</h4>
-                    <p class="my-3"><a href="https://github.com/safetyAI/ChatSafetyAI/blob/main/README.md#terms-of-use" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 font-medium">ChatSafetyAI Terms of Use</a></p>
-                    <p class="my-3"><a href="https://scholar.google.com/citations?hl=en&user=l5JRP-kAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 font-medium">SafetyAI's Research Papers</a></p>
+
+                <div class="footer-col">
+                    <h4>
+                        <span class="en-text">Useful Links</span>
+                        <span class="fr-text">Liens Utiles</span>
+                    </h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://github.com/safetyAI/ChatSafetyAI/blob/main/README.md#terms-of-use" target="_blank">
+                                <span class="en-text">ChatSafetyAI Terms of Use</span>
+                                <span class="fr-text">ChatSafetyAI - Conditions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?hl=en&user=l5JRP-kAAAAJ&view_op=list_works" target="_blank">
+                                <span class="en-text">SafetyAI's Research Papers</span>
+                                <span class="fr-text">Nos Articles de Recherche</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col"></div>
+
+            </div>
+            
+            <div class="footer-bottom">
+                <div>
+                    <span class="en-text">&copy; 2026 SafetyAI. Built by Antoine Tixier.</span>
+                    <span class="fr-text">&copy; 2026 SafetyAI. Conçu par Antoine Tixier.</span>
                 </div>
             </div>
         </div>
-        <div class="copy-right bg-[#4A6CF7] bg-opacity-10 p-8">
-            <div class="container mx-auto text-gray-500 dark:text-gray-400 text-center text-base font-bold">
-                <p>Built by Antoine Tixier based on this <a href="https://github.com/farideghbali/startup-website-template" target="_blank"><u>template</u></a>.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="./js/script.js"></script>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
