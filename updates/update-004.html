@@ -110,8 +110,8 @@
             <div class="article-content" style="line-height: 1.7; font-size: 1.05rem;">
                 
                 <p style="margin-bottom: 30px;">
-                    <span class="en-text">We have deployed a comprehensive update focusing on the reliability of the Custom Database retrieval system, alongside enhancements to the Regulations mode and a new self-healing link mechanism.</span>
-                    <span class="fr-text">Nous avons déployé une mise à jour complète axée sur la fiabilité du système de recherche de la Base de Données Personnalisée, ainsi que des améliorations du mode Réglementations et un nouveau mécanisme d'auto-réparation des liens.</span>
+                    <span class="en-text">We have deployed an update focusing on the reliability of the Custom Database retrieval system, alongside enhancements to the Regulations mode and a new self-healing link mechanism.</span>
+                    <span class="fr-text">Nous avons déployé une mise à jour axée sur la fiabilité du système de recherche de la Base de Données Personnalisée, ainsi que des améliorations du mode Réglementations et un nouveau mécanisme d'auto-réparation des liens.</span>
                 </p>
 
                 <h2 style="margin: 40px 0 20px 0;">
@@ -119,8 +119,8 @@
                     <span class="fr-text">Appels de Recherche Plus Intelligents</span>
                 </h2>
                 <p style="margin-bottom: 20px;">
-                    <span class="en-text">ChatSafetyAI is now fully aware of the file list within the selected custom database. This context allows the AI to generate significantly more accurate search queries targeted at your specific documents, resulting in better answers.</span>
-                    <span class="fr-text">ChatSafetyAI connaît désormais la liste complète des fichiers au sein de la base de données sélectionnée. Ce contexte permet à l'IA de générer des requêtes de recherche beaucoup plus précises et ciblées sur vos documents, améliorant ainsi la qualité des réponses.</span>
+                    <span class="en-text">ChatSafetyAI is now aware of the file list within the selected custom database. This context allows the AI to generate more accurate search queries, resulting in better answers.</span>
+                    <span class="fr-text">ChatSafetyAI connaît désormais la liste des fichiers au sein de la base de données sélectionnée. Ce contexte permet à l'IA de générer des requêtes de recherche plus précises, améliorant ainsi la qualité des réponses.</span>
                 </p>
 
                 <h2 style="margin: 40px 0 20px 0;">
@@ -128,17 +128,17 @@
                     <span class="fr-text">Déclenchement Systématique de la Recherche</span>
                 </h2>
                 <p style="margin-bottom: 20px;">
-                    <span class="en-text">We fixed an issue where the custom database mode would sometimes fail to trigger during long conversations. Now, whenever a custom database is selected, a search call is performed systematically for every user prompt, regardless of the query phrasing.</span>
-                    <span class="fr-text">Nous avons corrigé un problème où le mode base de données personnalisée ne se déclenchait parfois pas lors de longues conversations. Désormais, lorsqu'une base de données est sélectionnée, une recherche est effectuée systématiquement à chaque invite de l'utilisateur, quelle que soit la formulation.</span>
+                    <span class="en-text">We fixed an issue where the custom database mode would sometimes fail to trigger more than once in the same conversation. Now, whenever a custom database is selected, a search call is performed systematically for every user query.</span>
+                    <span class="fr-text">Nous avons corrigé un problème où le mode base de données personnalisée ne se déclenchait pas plusieurs fois de suite dans une conversation. Désormais, lorsqu'une base de données est sélectionnée, une recherche est effectuée systématiquement.</span>
                 </p>
 
                 <h2 style="margin: 40px 0 20px 0;">
-                    <span class="en-text">Fix for Broken URLs</span>
-                    <span class="fr-text">Correction des Liens Rompus</span>
+                    <span class="en-text">Index Update</span>
+                    <span class="fr-text">Synchronisation de l'Index</span>
                 </h2>
                 <p style="margin-bottom: 20px;">
-                    <span class="en-text">Previously, deleted files were not always immediately removed from the search index, which could lead to ChatSafetyAI citing documents that no longer existed (resulting in 404 errors). This has been fixed: the index now syncs instantly upon file deletion.</span>
-                    <span class="fr-text">Auparavant, les fichiers supprimés n'étaient pas toujours immédiatement retirés de l'index de recherche, ce qui pouvait amener ChatSafetyAI à citer des documents inexistants (provoquant des erreurs 404). Ce problème est corrigé : l'index se synchronise désormais instantanément lors de la suppression de fichiers.</span>
+                    <span class="en-text">Files deleted from a custom database were not removed from the search index, which could lead to ChatSafetyAI citing documents that no longer existed, with broken URLs. This has been fixed: the index now syncs instantly upon file deletion.</span>
+                    <span class="fr-text">Les fichiers supprimés d'une base de données personnalisée n'étaient pas retirés de l'index de recherche, ce qui pouvait amener ChatSafetyAI à citer des documents inexistants, avec des liens invalides. Ce problème est corrigé : l'index se synchronise désormais instantanément lors de la suppression de fichiers.</span>
                 </p>
 
                 <h2 style="margin: 40px 0 20px 0;">
@@ -146,7 +146,7 @@
                     <span class="fr-text">Support des Noms de Fichiers Accentués</span>
                 </h2>
                 <p style="margin-bottom: 20px;">
-                    <span class="en-text">The indexing engine now fully supports folder and file names containing accented characters (e.g., "Sécurité", "Procédure").</span>
+                    <span class="en-text">The indexing engine now supports folder and file names containing accented characters (e.g., "Sécurité", "Procédure").</span>
                     <span class="fr-text">Le moteur d'indexation prend désormais entièrement en charge les noms de dossiers et de fichiers contenant des caractères accentués (ex : "Sécurité", "Procédure").</span>
                 </p>
 
