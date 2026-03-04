@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company-Wide Databases - SafetyAI</title>
+    
+    <script data-goatcounter="https://safetyai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+    <meta name="description" content="Latest SafetyAI updates: Company-wide custom databases, bug fixes for chat sharing, and a sneak peek at what is next.">
+    <meta property="og:image" content="https://img.mailinblue.com/10033745/images/content_library/original/69a70c2cb5febaba41cda08d.png"/>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="../index.html#home" class="logo">
+                <img src="../assets/img/logo.png" alt="SafetyAI" class="logo-light">
+                <img src="../assets/img/logo-light.png" alt="SafetyAI" class="logo-dark">
+            </a>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li>
+                        <a href="../index.html#home">
+                            <span class="en-text">Home</span>
+                            <span class="fr-text">Accueil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" style="color:var(--primary-color);">
+                            <span class="en-text">Updates</span>
+                            <span class="fr-text">Actualités</span>
+                        </a>
+                    </li>
+                    <li><a href="../index.html#chat">ChatSafetyAI</a></li>
+                    <li>
+                        <a href="../index.html#dashboard">
+                            <span class="en-text">Dashboard</span>
+                            <span class="fr-text">Tableau de bord</span>
+                        </a>
+                    </li>
+                    <li><a href="../index.html#assistant">Assistant</a></li>
+                    <li>
+                        <a href="../index.html#team">
+                            <span class="en-text">Team</span>
+                            <span class="fr-text">Équipe</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html#council">
+                            <span class="en-text">Council</span>
+                            <span class="fr-text">Conseil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html#pricing">
+                            <span class="en-text">Pricing</span>
+                            <span class="fr-text">Tarifs</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="nav-utils">
+                <div class="lang-switch" id="langToggle">EN | FR</div>
+                
+                <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <svg id="sun-icon" style="display:none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg id="moon-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </div>
+                
+                <div class="menu-btn" id="menuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container" style="max-width: 740px;">
+            
+            <div style="margin-bottom: 30px;">
+                <a href="index.html" style="text-decoration: none; font-weight: 500; font-size: 0.9rem;">
+                    <span class="en-text">&larr; Back to Updates</span>
+                    <span class="fr-text">&larr; Retour aux actualités</span>
+                </a>
+            </div>
+
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">
+                <span class="en-text">MARCH 3, 2026</span>
+                <span class="fr-text">3 MARS 2026</span>
+            </div>
+
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: -10px; margin-bottom: 30px; font-weight: 500;">
+                <span class="en-text">By Antoine Tixier</span>
+                <span class="fr-text">Par Antoine Tixier</span>
+            </div>
+
+            <h1 style="margin-bottom: 30px; line-height: 1.3;">
+                <span class="en-text">Company-Wide Databases & Fixes</span>
+                <span class="fr-text">Bases de Données d'Entreprise & Corrections</span>
+            </h1>
+
+            <div class="article-content" style="line-height: 1.7; font-size: 1.05rem;">
+                
+                <p style="margin-bottom: 30px;">
+                    <span class="en-text">Hi there! 👋 Here’s a new feature we thought you’d like.</span>
+                    <span class="fr-text">Bonjour ! 👋 Voici une nouvelle fonctionnalité qui devrait vous plaire.</span>
+                </p>
+
+                <h2 style="margin: 40px 0 20px 0;">
+                    <span class="en-text">Company-Wide Databases ✨🏢</span>
+                    <span class="fr-text">Bases de Données à l'Échelle de l'Entreprise ✨🏢</span>
+                </h2>
+                <p style="margin-bottom: 20px;">
+                    <span class="en-text">The admin users of each organization can now create and populate databases visible to anyone in the organization! Regular users can view the files, but not add or remove files or create/delete company-wide databases. Of course, every user still manages their own personal databases, as before.</span>
+                    <span class="fr-text">Les administrateurs de chaque organisation peuvent désormais créer et alimenter des bases de données visibles par tous les membres de l'organisation ! Les utilisateurs réguliers peuvent consulter les fichiers, mais ne peuvent ni ajouter ni supprimer de fichiers, ni créer ou supprimer des bases de données d'entreprise. Bien entendu, chaque utilisateur gère toujours ses propres bases de données personnelles, comme auparavant.</span>
+                </p>
+                
+                <div style="margin-bottom: 30px; text-align: center;">
+                    <img src="https://img.mailinblue.com/10033745/images/content_library/original/69a70c2cb5febaba41cda08d.png" alt="Company Wide Database Screenshot" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                </div>
+
+                <div style="background-color: var(--accent-bg); border-left: 4px solid var(--primary-color); padding: 20px; border-radius: 8px; margin-bottom: 30px; font-size: 0.95rem;">
+                    <p style="margin-bottom: 15px;">
+                        <span class="en-text">👉 <strong>Note:</strong> The admin users for your company are those who can access the ChatSafetyAI Usage Dashboard. Contact us to add or remove people.</span>
+                        <span class="fr-text">👉 <strong>Note :</strong> Les administrateurs de votre entreprise sont ceux qui ont accès au tableau de bord d'utilisation de ChatSafetyAI. Contactez-nous pour ajouter ou retirer des personnes.</span>
+                    </p>
+                    <p style="margin-bottom: 15px;">
+                        <span class="en-text">💡 <strong>Remember:</strong> To let ChatSafetyAI ground its responses in a given database, select that database in the list above your query before submitting it!</span>
+                        <span class="fr-text">💡 <strong>N'oubliez pas :</strong> Pour que ChatSafetyAI fonde ses réponses sur une base de données spécifique, sélectionnez-la dans la liste au-dessus de votre requête avant de l'envoyer !</span>
+                    </p>
+                    <p style="margin-bottom: 0;">
+                        <span class="en-text">⚠️ For follow-up queries that do not require a database search (such as document generation, HECA, predictions, etc.), <strong>clear your selection!</strong></span>
+                        <span class="fr-text">⚠️ Pour les requêtes qui ne nécessitent pas de recherche dans la base de données (comme la génération de documents, HECA, les prédictions, etc.), <strong>effacez votre sélection !</strong></span>
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 40px; text-align: center;">
+                    <img src="https://img.mailinblue.com/10033745/images/content_library/original/69a7060cf91042694771b325.png" alt="Database Selection Step 1" style="max-width: 100%; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color);">
+                    <img src="https://img.mailinblue.com/10033745/images/content_library/original/69a71091b5febaba41cda25c.png" alt="Database Selection Step 2" style="max-width: 100%; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color);">
+                    <img src="https://img.mailinblue.com/10033745/images/content_library/original/69a721fa3c85c2826d94e951.png" alt="Clearing Database Selection" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border-color);">
+                </div>
+
+                <h2 style="margin: 40px 0 20px 0;">
+                    <span class="en-text">Chat Sharing, Parallel Session Fixed 🐞🛠️</span>
+                    <span class="fr-text">Partage de Chat, Session Parallèle Corrigée 🐞🛠️</span>
+                </h2>
+                <p style="margin-bottom: 20px;">
+                    <span class="en-text">The chat sharing functionality works again. The "Parallel Session" permanent hold has been addressed. If you face that issue again, you should now be able to start a new session after 60 secs at most. Thanks everyone for the bug reports.</span>
+                    <span class="fr-text">La fonctionnalité de partage de chat fonctionne à nouveau. Le blocage permanent lié aux « Sessions Parallèles » a été résolu. Si vous rencontrez à nouveau ce problème, vous devriez maintenant pouvoir démarrer une nouvelle session après 60 secondes maximum. Merci à tous pour vos signalements de bugs.</span>
+                </p>
+
+                <hr style="margin: 50px 0 30px 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                <h2 style="margin: 0 0 20px 0; font-size: 1.4rem;">
+                    <span class="en-text">What's Next? 😍</span>
+                    <span class="fr-text">La Suite ? 😍</span>
+                </h2>
+                <p style="margin-bottom: 40px;">
+                    <span class="en-text">We’re working on user preferences, memories, chat renaming, chat search engine, advanced spreadsheet reasoning and visualization, image generation, covering new regulation jurisdictions, and more! <a href="https://docs.google.com/forms/d/e/1FAIpQLScDMi2FB6iDH7INWoJanXD9oIxqencVXOWtW1gb4uqSSaaucA/viewform?usp=sharing&ouid=115552225118252109789" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Submit your suggestions here.</a></span>
+                    <span class="fr-text">Nous travaillons sur les préférences utilisateur, la mémoire, le renommage des chats, un moteur de recherche de conversations, le raisonnement et la visualisation avancés sur les feuilles de calcul, la génération d'images, la couverture de nouvelles juridictions réglementaires, et plus encore ! <a href="https://docs.google.com/forms/d/e/1FAIpQLScDMi2FB6iDH7INWoJanXD9oIxqencVXOWtW1gb4uqSSaaucA/viewform?usp=sharing&ouid=115552225118252109789" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Soumettez vos suggestions ici.</a></span>
+                </p>
+
+
+                <hr style="margin: 40px 0; border: 0; border-top: 1px solid var(--border-color);">
+                
+                <h3 style="margin-bottom: 30px; text-align: center;">
+                    <span class="en-text">Thanks!</span>
+                    <span class="fr-text">Merci !</span>
+                </h3>
+
+                <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 30px; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <img src="../assets/img/antoine.jpg" alt="Antoine Tixier" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                        <div style="font-weight: 600; font-size: 0.95rem;">Antoine Tixier</div>
+                        <div style="font-size: 0.85rem; opacity: 0.8;">CEO, Creator of ChatSafetyAI</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../assets/img/matt.jpg" alt="Matt Hallowell" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                        <div style="font-weight: 600; font-size: 0.95rem;">Matt Hallowell</div>
+                        <div style="font-size: 0.85rem; opacity: 0.8;">Strategic Advisor</div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                <a href="index.html" class="btn-primary">
+                    <span class="en-text">View all updates</span>
+                    <span class="fr-text">Voir toutes les actualités</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html#home" class="logo" style="margin-bottom: 20px; display: inline-block;">
+                        <img src="../assets/img/logo.png" alt="SafetyAI" class="logo-light" style="height: 32px;">
+                        <img src="../assets/img/logo-light.png" alt="SafetyAI" class="logo-dark" style="height: 32px;">
+                    </a>
+                    <p style="margin-bottom: 25px;">
+                        <span class="en-text">SafetyAI: State of the Art AI for Field-Based Occupational Safety.</span>
+                        <span class="fr-text">SafetyAI : L'IA de Pointe pour la Sécurité au Travail sur le terrain.</span>
+                    </p>
+                    <div class="social-row">
+                        <a href="https://www.youtube.com/@SafetyAI-Inc" target="_blank" aria-label="YouTube">
+                            <svg class="social-icon" viewBox="0 0 18 14">
+                                <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/safetyai-io" target="_blank" aria-label="LinkedIn">
+                            <svg class="social-icon" viewBox="0 0 17 16">
+                                <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>
+                        <span class="en-text">Useful Links</span>
+                        <span class="fr-text">Liens Utiles</span>
+                    </h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://github.com/safetyAI/ChatSafetyAI/blob/main/README.md#terms-of-use" target="_blank">
+                                <span class="en-text">ChatSafetyAI Terms of Use</span>
+                                <span class="fr-text">ChatSafetyAI - Conditions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?hl=en&user=l5JRP-kAAAAJ&view_op=list_works" target="_blank">
+                                <span class="en-text">SafetyAI's Research Papers</span>
+                                <span class="fr-text">Nos Articles de Recherche</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col"></div>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <span class="en-text">&copy; 2026 SafetyAI. Built by Antoine Tixier.</span>
+                    <span class="fr-text">&copy; 2026 SafetyAI. Conçu par Antoine Tixier.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
